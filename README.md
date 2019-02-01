@@ -1,7 +1,7 @@
 # Progetto MaDe
 
 # Descrizione:
----
+Repository per il progetto MaDe
 
 ## Sviluppatori:
 * **Rocchio Pietro**
@@ -18,7 +18,7 @@
  * [Angular](https://angular.io/)
  * [JQuery](https://jquery.com/)
  * [Bootstrap](https://getbootstrap.com/)
- * [Popper] (https://popper.js.org/)
+ * [Popper](https://popper.js.org/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
