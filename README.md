@@ -4,6 +4,7 @@
 
 # Descrizione:
 Repository per il progetto MaDe
+Realizzazione di un sito web, per il riconoscimento della flora del monte Baldo
 
 ## Sviluppatori:
 * **Rocchio Pietro**
