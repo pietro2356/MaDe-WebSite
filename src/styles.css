@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    background-color: #eee;
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+.footer{
+    background-color: #333;
+    padding: 30px;
+    color: #eee;
+    margin-top: 40px;
+}
+.footer__descrizione{ }
+.footer__contatti{ }
+.footer__link_utili{ }
+.footer__social{ }
