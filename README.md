@@ -16,9 +16,9 @@ Realizzazione di un sito web, per il riconoscimento della flora del monte Baldo
 * **Cecilia**
 
 ## Creato con:
- * [Angular](https://angular.io/)
+ * [Angular Material](https://material.angular.io/)
  * [JQuery](https://jquery.com/)
- * [Bootstrap](https://getbootstrap.com/)
+ * [HammerJS](https://hammerjs.github.io/)
  * [Popper](https://popper.js.org/)
 
 ## License
