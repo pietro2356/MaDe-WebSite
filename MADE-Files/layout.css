@@ -2,14 +2,15 @@
 
 .ricerca {
     size: 30px;
-    color: red;
+    color: #5BE800; /*WHITE*/
     text-align: center;
 }
 
+/*crea flex*/
 .container {
     display: flex; /* or inline-flex */
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row; /* Dispone in riga (partendo da destra le parti)*/
+    justify-content: center; /* Align the flex items at the center of the container*/
     padding: 1.5em;
 }
 
@@ -17,8 +18,33 @@
     padding: 1em;
 }
   
+/*casella di testo*/
 input {
     border-radius: 5px;
     width: 300px;
     height: 20px;
 }
+
+/*bottone*/
+button {
+    display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px #999;
+}
+
+button:hover {background-color: #cc3d19}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+  }
