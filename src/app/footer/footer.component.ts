@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   nomi:Nomi = new Nomi;
-  
-
+  listSocial:Social = new Social;
   descrizione = 'DESCRIZIONE';
   linkUtili = 'LINK UTILI';
   social = 'SOCIAL';
@@ -27,4 +26,8 @@ export class Nomi{
   battisoni = 'Battistoni Pietro';
   tomasini = 'Tomasini Valeria';
   folgarait = 'Folgarait Cecilia';
+}
+
+export class Social{
+  srcFacebbok = ''
 }

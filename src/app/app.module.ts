@@ -6,7 +6,7 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule, MatIconModule, MatToolbarModule, MatFormFieldModule } from '@angular/material';
-  import { from } from 'rxjs';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
