@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  nomi:Nomi = new Nomi;
+  
+
   descrizione = 'DESCRIZIONE';
-  contatti = 'CONTATTI';
   linkUtili = 'LINK UTILI';
   social = 'SOCIAL';
   constructor() { }
@@ -16,4 +18,13 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+}
+export class Nomi{
+  rocchio = 'Rocchio Pietro';
+  alberti = 'Alberti Davide';
+  cerbaro = 'Cerbaro Jessica';
+  baroni = 'Baroni Michelangelo';
+  battisoni = 'Battistoni Pietro';
+  tomasini = 'Tomasini Valeria';
+  folgarait = 'Folgarait Cecilia';
 }

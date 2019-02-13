@@ -9,6 +9,8 @@
     margin: 0px;
 }
 .footer__descrizione{ }
-.footer__contatti{ }
+.footer__contatti{
+    font-weight: bold;
+}
 .footer__link_utili{ }
 .footer__social{ }
