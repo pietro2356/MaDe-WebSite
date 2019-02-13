@@ -1,5 +1,6 @@
 /*titoli*/
 
+/*h1*/
 .ricerca {
     size: 30px;
     color: #5BE800; /*WHITE*/
@@ -14,18 +15,19 @@
     padding: 1.5em;
 }
 
+/*parte centrale della pagina*/
 .central-part {
     padding: 1em;
 }
   
-/*casella di testo*/
+/*casella di testo per ricerca*/
 input {
     border-radius: 5px;
     width: 300px;
     height: 20px;
 }
 
-/*bottone*/
+/*bottone ricerca*/
 button {
     display: inline-block;
   padding: 10px 20px;
@@ -47,4 +49,12 @@ button:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(3px);
-  }
+}
+/*fine bottone ricerca*/
+
+/*bottoni per selezionare modalità di ricerca*/
+.image-provvisoria {
+    position: absolute;
+    bottom: 0;
+    padding: 4px;
+}
