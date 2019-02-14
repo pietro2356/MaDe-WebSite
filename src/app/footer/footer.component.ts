@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   nomi:Nomi = new Nomi;
-  listSocial:Social = new Social;
-  descrizione = 'DESCRIZIONE';
+  descrizione = 'Qui andrà inerita una breve descrizione del sito! ---Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit vel ex fugiat obcaecati. Voluptas culpa, laudantium similique odit ut impedit sunt asperiores corrupti dolor aperiam. Porro consequuntur molestias eligendi fuga.---';
   linkUtili = 'LINK UTILI';
   social = 'SOCIAL';
   constructor() { }
@@ -23,11 +22,7 @@ export class Nomi{
   alberti = 'Alberti Davide';
   cerbaro = 'Cerbaro Jessica';
   baroni = 'Baroni Michelangelo';
-  battisoni = 'Battistoni Pietro';
+  battistoni = 'Battistoni Pietro';
   tomasini = 'Tomasini Valeria';
   folgarait = 'Folgarait Cecilia';
-}
-
-export class Social{
-  srcFacebbok = ''
 }
