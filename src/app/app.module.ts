@@ -3,16 +3,30 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FooterComponent } from './footer/footer.component';
+import { MatCardModule, MatIconModule, MatToolbarModule, MatFormFieldModule } from '@angular/material';
+import { CardComponent } from './list-card/card/card.component'
+import { ListCardComponent } from './list-card/list-card.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    CardComponent,
+    ListCardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
