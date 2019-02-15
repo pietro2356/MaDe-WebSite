@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './list-card/card/card.component'
 import { ListCardComponent } from './list-card/list-card.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
