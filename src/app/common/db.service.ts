@@ -21,12 +21,13 @@ export class DbService {
     this.http.get<Specie[]>(url, {
       observe: 'body',
       responseType: 'json'
-    })
+    })      
       .subscribe(
-        (specie: Specie[]) => {          
-          this.specieService.setSpecie(specie);
+        (specie: Specie[]) => {   
+          console.log(specie);         
+          this.specieService.setSpecie(specie.map(dati => new Specie(dati)));
         }
       );
-  }
+  }  
 }
 
