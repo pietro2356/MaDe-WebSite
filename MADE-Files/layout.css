@@ -61,6 +61,11 @@ fine bottone ricerca*/
     border: 0PX;
     margin: 0px;
     padding: 0px;
+    margin-right: 4px;
+}
+
+#myButton:active {
+    transform: translateY(3px);
 }
 
 /*bottoni per selezionare modalità di ricerca*/
