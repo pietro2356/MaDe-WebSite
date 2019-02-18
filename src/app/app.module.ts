@@ -6,8 +6,8 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule, MatIconModule, MatToolbarModule, MatFormFieldModule } from '@angular/material';
-import { CardComponent } from './list-card/card/card.component'
-import { ListCardComponent } from './list-card/list-card.component';
+import { CardComponent } from './container/list-card/card/card.component'
+import { ListCardComponent } from './container/list-card/list-card.component';
 import { from } from 'rxjs';
 import { ContainerComponent } from './container/container.component';
 import { CardImgComponent } from './container/card-img/card-img.component';
