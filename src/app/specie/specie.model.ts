@@ -1,9 +1,3 @@
-const imagePath: string = "http://daas.marconirovereto.it/baldo/";
-const imageMap: string = "maps/";
-const imageMapIcon: string = "maps_ico/";
-const imagePhoto: string = "photo/";
-const imagePhotoIco: string = "photo_ico/"
-
 export class Specie {
     famiglia: string;
     id: number;
@@ -45,16 +39,5 @@ export class Specie {
         this.descrizione = descrizione;
     }
 
-    getImagePhotoUrl() {
-        return imagePath+imagePhoto+this.image_foto;
-    }
-    getImagePhotoIconUrl() {
-        return imagePath+imagePhotoIco+this.image_foto;
-    }
-    getImageMapUrl() {
-        return imagePath+imageMap+this.image_map;
-    }
-    getImageMapIconUrl() {
-        return imagePath+imageMapIcon+this.image_map;
-    }
+    
 }

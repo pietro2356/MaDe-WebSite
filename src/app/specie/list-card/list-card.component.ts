@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Specie } from '../specie.model';
+import { Subscription } from 'rxjs';
+import { SpecieService } from '../specie.service';
+import { DbService } from 'src/app/common/db.service';
+
+
 
 @Component({
   selector: 'app-list-card',
@@ -8,12 +13,19 @@ import { Specie } from '../specie.model';
 })
 export class ListCardComponent implements OnInit {
 
-  @Input() specie: Specie[];
+  specie: Specie[];
+  specieSuscription: Subscription;
 
-  constructor() { }
+  constructor(private specieService: SpecieService,
+              private dbService: DbService) { }
 
   ngOnInit() {
-   
+    this.dbService.getSpecie();
+    this.specieSuscription = this.specieService.specieChanged
+    .subscribe(
+      (specie: Specie[]) => {
+        this.specie = specie; 
+      });
   }
 
 }

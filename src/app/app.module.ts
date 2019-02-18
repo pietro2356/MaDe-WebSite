@@ -11,6 +11,8 @@ import { SpecieComponent } from './specie/specie.component';
 import { CardImgComponent } from './specie/card-img/card-img.component';
 import { CardDataComponent } from './specie/card-data/card-data.component';
 import { MaterialModule } from './material.module';
+import { DbService } from './common/db.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,12 @@ import { MaterialModule } from './material.module';
     BrowserModule,
     BrowserAnimationsModule,    
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
-  exports: [
-    MatButtonModule,
-    MatCheckboxModule
+  exports: [    
   ],
-  providers: [],
+  providers: [DbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
