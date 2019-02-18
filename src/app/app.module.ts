@@ -9,13 +9,15 @@ import { MatCardModule, MatIconModule, MatToolbarModule, MatFormFieldModule } fr
 import { CardComponent } from './list-card/card/card.component'
 import { ListCardComponent } from './list-card/list-card.component';
 import { from } from 'rxjs';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     CardComponent,
-    ListCardComponent
+    ListCardComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
