@@ -9,7 +9,9 @@ import { MatCardModule, MatIconModule, MatToolbarModule, MatFormFieldModule } fr
 import { CardComponent } from './list-card/card/card.component'
 import { ListCardComponent } from './list-card/list-card.component';
 import { from } from 'rxjs';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { ContainerComponent } from './container/container.component';
+import { CardImgComponent } from './container/card-img/card-img.component';
+import { CardDataComponent } from './container/card-data/card-data.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     FooterComponent,
     CardComponent,
     ListCardComponent,
-    SearchBarComponent
+    ContainerComponent,
+    CardImgComponent,
+    CardDataComponent
   ],
   imports: [
     BrowserModule,
