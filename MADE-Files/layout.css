@@ -1,0 +1,102 @@
+/*titoli*/
+
+/*h1*/
+#ricerca {
+    size: 30px;
+    color: #5BE800; /*WHITE*/
+    text-align: center;
+}
+
+/*crea flex*/
+#container {
+    display: flex; /* or inline-flex */
+    flex-direction: row; /* Dispone in riga (partendo da destra le parti)*/
+    justify-content: center; /* Align the flex items at the center of the container*/
+    padding: 1.5em;
+}
+
+/*parte centrale della pagina*/
+#central-part {
+    padding: 1em;
+}
+  /*
+/*casella di testo per ricerca*/
+input {
+    border-radius: 5px;
+    width: 300px;
+    height: 20px;
+}
+
+/*
+bottone ricerca
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+}
+
+button:hover {background-color: #cc3d19}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+}
+fine bottone ricerca*/
+
+/*immagine lenta*/
+#myButton {
+    cursor:pointer;
+    width: 35px;
+    height: auto;
+    border: 0PX;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 4px;
+}
+
+#myButton:active {
+    transform: translateY(3px);
+}
+
+/*bottoni per selezionare modalità di ricerca*/
+#image-provvisoria1 {
+    position: absolute;
+    bottom: 0;
+    /*left: 30%;*/
+    padding: 4px;
+    margin: 15px;
+}
+
+#image-provvisoria2 {
+    position: absolute;
+    bottom: 0;
+    /*left: 38%;*/
+    padding: 4px;
+    margin: 15px;
+}
+
+#image-provvisoria3 {
+    position: absolute;
+    bottom: 0;
+    /*left: 46%;*/
+    padding: 4px;
+    margin: 15px;
+}
+
+#image-provvisoria4 {
+    position: absolute;
+    bottom: 0;
+    /*left: 54%;*/
+    padding: 25%;
+    margin: 15px;
+}
