@@ -1,4 +1,4 @@
-const v_specie = '<tr><th>Famiglia</th><th>Genere</th><th>Epiteto</th><th>Nome Latino</th><th>Nome Comune</th><th>Quota minima</th><th>Quota massima</th></tr>';
+const v_specie = '<tr><th>Famiglia</th><th>Genere</th><th>Epiteto</th><th>Nome Latino</th><th>Nome Comune</th><th>Descrizione</th><th>Foto</th><th>Quota minima</th><th>Quota massima</th></tr>';
 const ws_hostname = 'http://daas.marconirovereto.it:50055';
 
 const getFamiglia = (famiglia) => {
@@ -83,16 +83,20 @@ const getSpecieByQuotaMax = (quota) => {
         str += v_specie;
 
         for (let i in data) {
+            if(data[i].quota_max <= quota){
                 str += '<tr>';
             str += '<td>' + data[i].famiglia + '</td>';
             str += '<td>' + data[i].genere + '</td>';
             str += '<td>' + data[i].epiteto + '</td>';
             str += '<td>' + data[i].nome_latino + '</td>';
             str += '<td>' + data[i].nome_comune + '</td>';
+            str += '<td  style="text-align: left">' + data[i].descrizione + '</td>';
+            str += '<td style="padding: 2%;">' + '<img alt="" src="http://daas.marconirovereto.it/Baldo/photo_ico/' + data[i].image_foto + '"/></td>';
             str += '<td>' + data[i].quota_min + '</td>';
             str += '<td>' + data[i].quota_max + '</td>';
 
             str += '</tr>';
+            }
         }
         str += "</table>"
 
@@ -108,16 +112,20 @@ const getSpecieByQuotaMin = (quota) => {
         str += v_specie;
 
         for (let i in data) {
+            if(data[i].quota_min >= quota){
             str += '<tr>';
             str += '<td>' + data[i].famiglia + '</td>';
             str += '<td>' + data[i].genere + '</td>';
             str += '<td>' + data[i].epiteto + '</td>';
             str += '<td>' + data[i].nome_latino + '</td>';
             str += '<td>' + data[i].nome_comune + '</td>';
+            str += '<td  style="text-align: left">' + data[i].descrizione + '</td>';
+            str += '<td style="padding: 2%;">' + '<img alt="" src="http://daas.marconirovereto.it/Baldo/photo_ico/' + data[i].image_foto + '"/></td>';
             str += '<td>' + data[i].quota_min + '</td>';
             str += '<td>' + data[i].quota_max + '</td>';
 
             str += '</tr>';
+            }
         }
         str += "</table>"
 
