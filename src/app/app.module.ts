@@ -5,13 +5,12 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
-import { MatCardModule, MatIconModule, MatToolbarModule, MatFormFieldModule } from '@angular/material';
-import { CardComponent } from './list-card/card/card.component'
-import { ListCardComponent } from './list-card/list-card.component';
-import { from } from 'rxjs';
-import { ContainerComponent } from './container/container.component';
-import { CardImgComponent } from './container/card-img/card-img.component';
-import { CardDataComponent } from './container/card-data/card-data.component';
+import { CardComponent } from './specie/list-card/card/card.component'
+import { ListCardComponent } from './specie/list-card/list-card.component';
+import { SpecieComponent } from './specie/specie.component';
+import { CardImgComponent } from './specie/card-img/card-img.component';
+import { CardDataComponent } from './specie/card-data/card-data.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -19,20 +18,15 @@ import { CardDataComponent } from './container/card-data/card-data.component';
     FooterComponent,
     CardComponent,
     ListCardComponent,
-    ContainerComponent,
+    SpecieComponent,
     CardImgComponent,
     CardDataComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
+    BrowserAnimationsModule,    
     FlexLayoutModule,
-    MatCardModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatFormFieldModule
+    MaterialModule
   ],
   exports: [
     MatButtonModule,
