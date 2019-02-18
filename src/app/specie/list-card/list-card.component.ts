@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Specie } from './card/specie.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { Specie } from '../specie.model';
 
 @Component({
   selector: 'app-list-card',
@@ -8,7 +8,7 @@ import { Specie } from './card/specie.model';
 })
 export class ListCardComponent implements OnInit {
 
-  specie: Specie;
+  @Input() specie: Specie[];
 
   constructor() { }
 
