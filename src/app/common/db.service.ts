@@ -152,5 +152,5 @@ export class DbService {
           this.specieService.setSpecie(specie.map(dati => new Specie(dati)));
         }
       );
-  }*/
+  }
 }

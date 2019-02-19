@@ -1,3 +1,7 @@
-<img *ngIf="specie" [src]="specie.getImagePhotoUrl()" [alt]="specie.nome_comune" />
+<div class="card_image">
+<img *ngIf="specie" [src]="specie.getImagePhotoUrl()" [alt]="specie.nome_comune" style="width:100%"/>
+</div>
 <br />
+<div class="card_image_map">
 <img *ngIf="specie" [src]="specie.getImageMapUrl()" [alt]="specie.nome_comune" />
+</div>

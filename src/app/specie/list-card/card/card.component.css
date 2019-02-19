@@ -3,4 +3,5 @@ mat-list-item {
     border-radius: 7px;
     margin-bottom: 8px;
     padding-top: 0px !important;
+    max-width: 100%;
 }
