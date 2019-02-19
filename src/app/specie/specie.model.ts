@@ -39,5 +39,4 @@ export class Specie {
     public getImageMapIconUrl(): string {
         return imagePath + imageMapIcon + this.image_map;
     }
-
 }
