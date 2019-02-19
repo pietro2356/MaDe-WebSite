@@ -13,7 +13,7 @@ const getFamiglia = (famiglia) => {
             str += '<td>' + data[i].famiglia + '</td>';
             str += '<td style="padding: 2%;">' + '<img alt="" src="http://daas.marconirovereto.it/Baldo/photo_ico/' + data[i].image_foto + '"/></td>';
             str += '<td>' + data[i].quota_min + '</td>';
-            str += '<td>' + data[i].quota_max + '</td>';
+         str += '<td>' + data[i].quota_max + '</td>';
             str += '</tr>';
         }
         str += "</table>";

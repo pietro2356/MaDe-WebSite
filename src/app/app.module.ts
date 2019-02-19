@@ -13,6 +13,8 @@ import { CardDataComponent } from './specie/card-data/card-data.component';
 import { MaterialModule } from './material.module';
 import { DbService } from './common/db.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListCardComponent,
     SpecieComponent,
     CardImgComponent,
-    CardDataComponent
+    CardDataComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

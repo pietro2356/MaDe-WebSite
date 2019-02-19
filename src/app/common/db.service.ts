@@ -16,7 +16,7 @@ export class DbService {
 
   public getSpecie() {
 
-    let url = restServiceUrl + "specie";
+    let url = restServiceUrl + "Specie/";
 
     this.http.get<Specie[]>(url, {
       observe: 'body',
@@ -30,4 +30,3 @@ export class DbService {
       );
   }  
 }
-
