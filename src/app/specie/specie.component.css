@@ -1,8 +1,13 @@
-.ris, .images, .data {
-    border: 1px solid blue;
+.ris, .images, .data{
     height: 580px;
-    overflow-y: scroll;
 }
 .container{
     margin-top: 10px;
 }
+.ris, .images{
+    overflow-y: scroll;
+   /* overflow: hidden;*/
+}
+/*::-webkit-scrollbar { 
+    display: none; 
+}*/

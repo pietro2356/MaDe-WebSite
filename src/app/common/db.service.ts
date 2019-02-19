@@ -14,7 +14,7 @@ export class DbService {
 
 
   public getSpecie() {
-    let url = restServiceUrl + "Specie";
+    let url = restServiceUrl + "specie";
     this.http.get<Specie[]>(url, {
       observe: 'body',
       responseType: 'json'
@@ -26,7 +26,6 @@ export class DbService {
         }
       );
   }
-/*
   public getGenere(genere: string) {
     let url = restServiceUrl + "Specie/Genere/" + genere;
     this.http.get<Specie[]>(url, {
