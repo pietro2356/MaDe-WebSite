@@ -14,8 +14,11 @@ import { MaterialModule } from './material.module';
 import { DbService } from './common/db.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+<<<<<<< HEAD
 import { from } from 'rxjs';
 
+=======
+>>>>>>> 42e21d588595f808684039475a9e1375b55020f2
 @NgModule({
   declarations: [
     AppComponent,
