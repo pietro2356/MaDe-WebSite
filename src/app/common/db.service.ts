@@ -14,11 +14,7 @@ export class DbService {
 
 
   public getSpecie() {
-<<<<<<< HEAD
-
-    let url = restServiceUrl + "Specie/";
-=======
-    let url = restServiceUrl + "specie";
+    let url = restServiceUrl + "Specie";
     this.http.get<Specie[]>(url, {
       observe: 'body',
       responseType: 'json'
@@ -30,8 +26,7 @@ export class DbService {
         }
       );
   }
->>>>>>> 42e21d588595f808684039475a9e1375b55020f2
-
+/*
   public getGenere(genere: string) {
     let url = restServiceUrl + "Specie/Genere/" + genere;
     this.http.get<Specie[]>(url, {
@@ -44,10 +39,6 @@ export class DbService {
           this.specieService.setSpecie(specie.map(dati => new Specie(dati)));
         }
       );
-<<<<<<< HEAD
-  }  
-}
-=======
   }
 
   public getFamiglia(famiglia: string) {
@@ -162,6 +153,5 @@ export class DbService {
           this.specieService.setSpecie(specie.map(dati => new Specie(dati)));
         }
       );
-  }
+  }*/
 }
->>>>>>> 42e21d588595f808684039475a9e1375b55020f2
