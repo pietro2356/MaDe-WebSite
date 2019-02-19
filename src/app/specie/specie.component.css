@@ -1,0 +1,8 @@
+.ris, .images, .data {
+    border: 1px solid blue;
+    height: 580px;
+    overflow-y: scroll;
+}
+.container{
+    margin-top: 10px;
+}
