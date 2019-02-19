@@ -13,6 +13,7 @@ export class CardDataComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
