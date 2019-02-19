@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
-import { CardComponent } from './specie/list-card/card/card.component'
+import { CardComponent } from './specie/list-card/card/card.component';
 import { ListCardComponent } from './specie/list-card/list-card.component';
 import { SpecieComponent } from './specie/specie.component';
 import { CardImgComponent } from './specie/card-img/card-img.component';
@@ -14,6 +14,7 @@ import { MaterialModule } from './material.module';
 import { DbService } from './common/db.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,

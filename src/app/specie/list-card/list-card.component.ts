@@ -27,5 +27,4 @@ export class ListCardComponent implements OnInit {
         this.specie = specie; 
       });
   }
-
 }
