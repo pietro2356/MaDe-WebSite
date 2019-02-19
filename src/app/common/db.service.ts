@@ -26,6 +26,7 @@ export class DbService {
         }
       );
   }
+
   public getGenere(genere: string) {
     let url = restServiceUrl + "Specie/Genere/" + genere;
     this.http.get<Specie[]>(url, {
