@@ -24,12 +24,7 @@
             ],
             "styles": [
               "src/styles.css"
-<<<<<<< HEAD
             ]
-=======
-            ],
-            "scripts": []
->>>>>>> 48de26e0456834afff9317ad41dd93a28a109c01
           },
           "configurations": {
             "production": {

@@ -1,6 +1,6 @@
 /*----*----*/
 .container_img{
-    background: url('../../assets/ico/HOME_SFONDO.jpg');
+    /* background: url('../../assets/ico/HOME_SFONDO.jpg'); */
     background-repeat: no-repeat;
     /* position: fixed;  */
     z-index: -1; 
