@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { from } from 'rxjs';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
