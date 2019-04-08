@@ -1,11 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: 'Brandon Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Brandon Text Regular'), url('assets/font/BrandonText-Regular.woff') format('woff');
+}
+
 body{
-    background-color: #eee;
+    /*background-image: url('/src/assets/ico/sfondo-generico.png');*/
     margin:0;
     padding:0;
     border:0;
-    font-size:100%;
-    font:inherit;
+    font-family: 'Brandon Text Regular';
+    font-weight: normal;
     vertical-align:baseline;
 }

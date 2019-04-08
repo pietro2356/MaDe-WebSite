@@ -1,0 +1,16 @@
+#ricerca {
+    color: rgb(255, 0, 242);
+    position: absolute;
+}
+
+.searchTerm{
+    width: 20%;
+    border: 3px solid #00B4CC;
+    padding: 5px;
+    height: 24px;
+    color: #9DBFAF;
+}
+.searchButton{
+    background-color: rgb(148, 255, 175);
+    cursor: pointer;
+}

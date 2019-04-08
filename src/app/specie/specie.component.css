@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+=======
+.ris, .images, .data{
+    height: 580px;
+}
+.container{
+    margin-top: 10px;
+}
+.ris, .images{
+    overflow-y: scroll;
+   /* overflow: hidden;*/
+}
+/*::-webkit-scrollbar { 
+    display: none; 
+}*/
+>>>>>>> 48de26e0456834afff9317ad41dd93a28a109c01
