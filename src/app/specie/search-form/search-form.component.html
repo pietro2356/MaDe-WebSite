@@ -1,3 +1,16 @@
-<p>
-  search-form works!
-</p>
+<form [formGroup]="searchForm" (ngSubmit)="Cerca()">
+  <h4 class="mat-h4">Filtra per famiglia</h4>
+  <mat-form-field>
+    <mat-select placeholder="Famiglie" formControlName="famiglie" (selectionChange)="filtraPerFamiglia()">
+      <mat-option *ngFor="let famiglia of famiglie" [value]="famiglia.famiglia">{{famiglia.famiglia}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h4 class="mat-h4">Filtra per genere</h4>
+  <mat-form-field>
+      <mat-select placeholder="Generi" formControlName="generi" (selectionChange)="filtraPerGenere()">
+        <mat-option *ngFor="let genere of generi" [value]="genere.genere">{{genere.genere}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+</form>

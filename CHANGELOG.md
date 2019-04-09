@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.4] (10-04-2019)
+- Aggiornata sezione specie. 
+- Trovato un bug nella selezione delle famiglie.
+
 ## [0.1.0] (15-02-2019)
 - Rilascio versione Stable del sito.
 

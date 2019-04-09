@@ -1,3 +1,11 @@
-<p>
-  specie works!
-</p>
+<mat-sidenav-container class="main-container">
+    <mat-sidenav mode="side" opened class="search-form">
+        <app-search-form></app-search-form>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-specie-list [specie]="specie" *ngIf="specie; else messaggio"></app-specie-list>
+        <ng-template #messaggio>
+            <h1 class="mat-h1">Selezionare il genere o la famiglia</h1>
+        </ng-template>
+    </mat-sidenav-content>
+</mat-sidenav-container>

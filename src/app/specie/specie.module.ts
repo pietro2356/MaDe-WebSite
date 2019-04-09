@@ -7,6 +7,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { MaterialModule } from '../material.module';
 import { FlexModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [

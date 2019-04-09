@@ -1,4 +1,4 @@
-.ris, .images, .data{
+/* .ris, .images, .data{
     height: 580px;
 }
 .container{
@@ -6,8 +6,15 @@
 }
 .ris, .images{
     overflow-y: scroll;
-   /* overflow: hidden;*/
+    overflow: hidden;
 }
-/*::-webkit-scrollbar { 
+:-webkit-scrollbar { 
     display: none; 
-}*/
+} */
+
+.search-form {
+    /*padding: 20px;    */
+}
+.main-container {
+    height: 91%;
+}
