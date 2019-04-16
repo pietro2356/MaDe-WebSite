@@ -1,15 +1,19 @@
 <div class="container_img">
   <header class="header">
     <div class="header__div">
-      <img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna">
+      <img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna" (click)="drawer.toggle()">
     </div>
   </header>
+  
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <h1 style="color:red">Legenda</h1>
+  </mat-drawer>
 
   <div id="search-bar">
     <h1 id="ricerca">Flora del Monte Baldo</h1>
     <div [fxLayout]="direction" fxLayoutAlign="center center">
       <input type="text" class="searchTerm" placeholder="Cosa stai cercando?">
-      <INPUT type="image" src="assets/ico/cerca.png" value="" class="searchButton">
+      <input type="image" src="assets/ico/cerca.png" value="" class="searchButton">
     </div>
   </div>
 
@@ -20,3 +24,7 @@
     <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-specie.png" alt="">
   </div>
 </div>
+
+
+
+
