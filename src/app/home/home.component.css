@@ -1,8 +1,6 @@
-/*----*----*/
 .container_img{
-    background: url('../../assets/ico/sfondo-generico.png');
+    background: url('../../assets/ico/HOME_SFONDO.jpg');
     background-repeat: no-repeat;
-    /* position: fixed;  */
     z-index: -1; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -12,21 +10,17 @@
     height: auto;
     width: auto;
 }
-/*----RICERCA----*/
+
 #ricerca {
-    /*size: 30px;*/
-    color: white; /*WHITE*/
+    color: white;
     width: 500px;
     text-align: center;
-    /*text-align: center;*/
 }
 
-/*----SEARCH BAR----*/
 #search-bar{
    position: absolute;
    top: 30%;
    left: 50%;
-   /*transform: translate(-50%, -50%);*/
 }
 .searchTerm{
     width: 100%;
@@ -45,7 +39,6 @@
     background-color: rgba(238, 238, 238, 0.9);
 }
 
-/*----CONTAINER----*/
 .container__img{
     margin-top: 200px;  
     padding-top: 20px;    
@@ -59,7 +52,6 @@
     padding-bottom: 2%; 
 }
 
-/*---HEADER----*/
 .header{
     background-color: #eeeeee11;
     height: 50px;;
