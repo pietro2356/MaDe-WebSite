@@ -43,15 +43,16 @@
 }
 
 .container__img__setting{
-    width: 125px;
-    height: 125px;
+    width: 5%;
+    height: 5%;
+    opacity: 0.8;
     padding-left: 15%;
     padding-bottom: 2%; 
 }
 
 .header{
     background-color: #eeeeee11;
-    height: 50px;;
+    height: 50px;
 }
 
 .header__div__img{
@@ -64,3 +65,4 @@
 .example-sidenav {
     float: none;
 }
+
