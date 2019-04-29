@@ -1,5 +1,5 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true" fullscreen>
-  
+
   <mat-drawer #drawer class="example-sidenav" mode="over">
     <app-project-info></app-project-info>
   </mat-drawer>
@@ -11,20 +11,20 @@
         </div>
       </header>
     </div>
-    
-      <div id="search-bar">
-        <h1 id="ricerca">Flora del Monte Baldo</h1>
-        <div [fxLayout]="direction" fxLayoutAlign="center center">
-          <input type="text" class="searchTerm" placeholder="Cosa stai cercando?">
-          <input type="image" src="assets/ico/cerca.png" value="" class="searchButton">
-        </div>
-      </div>
 
-      <div fxLayout="column wrap">
-        <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-famiglia.png" alt="">
-        <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-genere.png" alt="">
-        <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-genere.png" alt="">
-        <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-specie.png" alt="">
+    <div id="search-bar">
+      <h1 id="ricerca">Flora del Monte Baldo</h1>
+      <div [fxLayout]="direction" fxLayoutAlign="center center">
+        <input type="text" class="searchTerm" placeholder="Cosa stai cercando?">
+        <input type="image" src="assets/ico/cerca.png" value="" class="searchButton">
       </div>
-    </mat-drawer-content>
-  </mat-drawer-container>
+    </div>
+
+    <div fxLayout="column wrap">
+      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-famiglia.png" alt="">
+      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-genere.png" alt="">
+      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-genere.png" alt="">
+      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-specie.png" alt="">
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
