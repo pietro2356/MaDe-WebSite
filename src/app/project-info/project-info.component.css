@@ -4,15 +4,25 @@
 }
 .title{
     background-color: #A7DD8F;
+    border-radius: 15px;
     padding: 1%;
-    border-radius: 10px;
     width: auto;
+    margin-top: 2%;
+}
+.table_info{
+    margin-top: 4%;
 }
 .grey {
     color: grey;
 }
-
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}
 th {
     font-weight: bold;
     text-align: left;
+    border-bottom: 1px solid black;
 }
