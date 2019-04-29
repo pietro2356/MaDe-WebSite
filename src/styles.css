@@ -6,25 +6,3 @@
     font-weight: normal;
     src: local('Brandon Text Regular'), url('assets/font/BrandonText-Regular.woff') format('woff');
 }
-
-/* body{
-    background-image: url('/src/assets/ico/HOME_SFONDO.jpg');
-    margin:0;
-    padding:0;
-    border:0;
-    font-family: 'Brandon Text Regular';
-    font-weight: normal;
-    vertical-align:baseline;
-} */
-body{
-    background: url('src/assets/ico/HOME_SFONDO.jpg');
-    background-repeat: no-repeat;
-    z-index: -1; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover; 
-    background-size: cover;
-    background-position: center; 
-    height: 100%;
-    width: 100%;
-}
