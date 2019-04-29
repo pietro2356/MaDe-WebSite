@@ -1,3 +1,7 @@
 form {
     position: fixed;
 }
+
+mat-sidenav-content {
+    margin-left: 200px;
+}
