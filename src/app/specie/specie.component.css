@@ -1,20 +1,3 @@
-/* .ris, .images, .data{
-    height: 580px;
-}
-.container{
-    margin-top: 10px;
-}
-.ris, .images{
-    overflow-y: scroll;
-    overflow: hidden;
-}
-:-webkit-scrollbar { 
-    display: none; 
-} */
-
-.search-form {
-    /*padding: 20px;    */
-}
 .main-container {
     height: 91%;
 }
