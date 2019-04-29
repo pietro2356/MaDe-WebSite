@@ -1,7 +1,13 @@
-.red {
-    color: red;
+.title_legenda {
+    color: white;
+    text-align: center;
 }
-
+.title{
+    background-color: #A7DD8F;
+    padding: 1%;
+    border-radius: 10px;
+    width: auto;
+}
 .grey {
     color: grey;
 }
