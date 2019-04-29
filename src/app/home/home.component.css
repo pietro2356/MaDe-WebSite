@@ -2,8 +2,7 @@
     height: auto;
     width: auto;
 }
-
-.example-container {
+ /* .container_img{
     background: url('../../assets/ico/HOME_SFONDO.jpg');
     background-repeat: no-repeat;
     z-index: -1; 
@@ -11,11 +10,11 @@
         -moz-background-size: cover;
         -o-background-size: cover; 
     background-size: cover;
-    background-position: center; 
-}
+    background-position: center; } */
+
 
 #ricerca {
-    color: white;
+    color: #ffffff;
     width: 500px;
     text-align: center;
 }
@@ -41,16 +40,19 @@
     border-top-right-radius: 8px;
     background-color: rgba(238, 238, 238, 0.9);
 }
-
+/* 
 .container__img{
-    margin-top: 200px;  
+    <header class="header">
+    <div class="header__div">
+      <img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna" (click)="drawer.toggle()">
+    </div>
+  </header>margin-top: 200px;  
     padding-top: 20px;    
     margin-left: 50px;    
-}
+} */
 .container__img__setting{
-    width: 5%;
-    height: 5%;
-    padding-top: 2%;
+    width: 125px;
+    height: 125px;
     padding-left: 15%;
     padding-bottom: 2%; 
 }

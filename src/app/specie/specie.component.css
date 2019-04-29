@@ -2,6 +2,6 @@
     height: 91%;
 }
 
-mat-sidenav-content {
-    left: 200px;
+.mat-sidenav-content{
+    left: 20%;
 }
