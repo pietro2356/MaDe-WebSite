@@ -1,10 +1,12 @@
 .title_legenda {
     color: white;
     text-align: center;
+    font-family: 'Brandon Text Regular';
 }
 .title{
     background-color: #A7DD8F;
-    border-radius: 15px;
+    border-radius: 20px;
+    border-bottom: 8px solid rgb(117, 179, 90);
     padding: 1%;
     width: auto;
     margin-top: 2%;
@@ -21,8 +23,12 @@
 .black{
     color: black;
 }
-th {
+th, td{
     font-weight: bold;
     text-align: left;
     border-bottom: 1px solid black;
+    padding: 2%;
+}
+th{
+    width: 12%;
 }

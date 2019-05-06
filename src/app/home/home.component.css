@@ -18,6 +18,7 @@
     color: #ffffff;
     width: 500px;
     text-align: center;
+    font-family: 'Brandon Text Regular';
 }
 
 #search-bar{
@@ -67,4 +68,9 @@
 .example-sidenav {
     float: none;
 }
-
+.header__div__logo{
+    float: left;
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 60px;
+}
