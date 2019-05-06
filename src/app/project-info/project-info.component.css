@@ -1,3 +1,11 @@
+/*da nascondere la scroll-bar*/
+html{
+    overflow-y: hidden;
+}
+.element::-webkit-scrollbar { 
+    width: 0 !important;
+    overflow-y: -moz-scrollbars-none;
+}
 .title_legenda {
     color: white;
     text-align: center;
@@ -31,4 +39,7 @@ th, td{
 }
 th{
     width: 12%;
+}
+#blu{
+    color:#002b66;
 }
