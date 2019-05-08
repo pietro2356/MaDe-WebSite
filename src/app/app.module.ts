@@ -12,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DbService } from './common/db.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectInfoComponent
+    ProjectInfoComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
