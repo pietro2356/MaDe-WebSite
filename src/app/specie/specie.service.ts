@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { DbService } from '../common/db.service';
 import { Specie } from './model/specie.model';
 import { Subject } from 'rxjs';
 import { Famiglia } from './model/famiglia.model';
@@ -17,6 +16,8 @@ export class SpecieService {
   specieAvailable = new Subject<Specie[]>();
   famiglieAvailable = new Subject<Famiglia[]>();
   generiAvailable = new Subject<Genere[]>();
+
+  specieChanged = new Subject<Specie[]>();
 
   constructor() { }
 
@@ -53,4 +54,9 @@ export class SpecieService {
     }));
   }
 
+  filtraSpecie(inizialeFamiglia: string) {
+    let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(inizialeFamiglia.toLowerCase()));
+    console.log('specie filtrate', specieFiltrate);
+    this.specieChanged.next(specieFiltrate);
+  }
 }

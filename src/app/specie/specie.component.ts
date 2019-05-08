@@ -9,28 +9,34 @@ import { Subscription } from 'rxjs';
   templateUrl: './specie.component.html',
   styleUrls: ['./specie.component.css']
 })
-export class SpecieComponent implements OnInit, OnDestroy {
+export class SpecieComponent implements OnInit {
 
   specie: Specie[];
-  specieAvailableControl: Subscription;
+  corrente: number;
 
+  specieSubscription: Subscription;
 
   constructor(private dbService: DbService,
               private specieService: SpecieService) { }
 
   ngOnInit() {
-    //this.dbService.getSpecie();
-    
-    this.specieAvailableControl = this.specieService.specieAvailable
+    this.corrente = -1;
+    this.specieSubscription = this.specieService.specieChanged
       .subscribe(
         (specie: Specie[]) => {
+          console.log('filto', specie)
           this.specie = specie;
+          this.corrente = 0;
         }
-      )
+      );
   }
 
-  ngOnDestroy() {
-    this.specieAvailableControl = null;
+  getSpecie(index: number) {
+    if(this.specie)
+    return this.specie[index];
   }
 
+  selezionaSpecie(indice: number) {
+    this.corrente = indice;
+  }
 }

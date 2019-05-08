@@ -8,7 +8,8 @@ import { Specie } from '../../model/specie.model';
 })
 export class SpecieItemComponent implements OnInit {
 
-  @Input() specieItem: Specie;
+  @Input() specie: Specie;
+  @Input() corrente: boolean;
 
   constructor() { }
 

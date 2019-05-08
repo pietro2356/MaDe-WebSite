@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Specie } from '../model/specie.model';
+import { SpecieService } from '../specie.service';
+import { DbService } from 'src/app/common/db.service';
 
 @Component({
   selector: 'app-specie-list',
@@ -9,10 +11,17 @@ import { Specie } from '../model/specie.model';
 export class SpecieListComponent implements OnInit {
 
   @Input() specie: Specie[];
+  @Input() corrente: number;
 
-  constructor() { }
+  @Output() onChangeSpecieIndex = new EventEmitter<number>();
+
+  constructor(private specieService: SpecieService,
+              private dbService: DbService) { }
 
   ngOnInit() {
   }
 
+  selezionaSpecie(indice: number) {
+    this.onChangeSpecieIndex.emit(indice);
+  }
 }

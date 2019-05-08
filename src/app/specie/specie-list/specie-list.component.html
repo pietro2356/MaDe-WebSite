@@ -1,3 +1,3 @@
-<div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="20px" id="container">
-  <app-specie-item *ngFor="let specieItem of specie" [specieItem]="specieItem" flex="1 1 calc(25% - 20px)"></app-specie-item>
-</div>
+<mat-list>
+  <app-specie-item *ngFor="let specieItem of specie; let i = index" [specie]="specieItem" (click)="selezionaSpecie(i)" [corrente]="i==corrente"></app-specie-item>
+</mat-list>

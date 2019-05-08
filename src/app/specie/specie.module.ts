@@ -7,14 +7,17 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { MaterialModule } from '../material.module';
 import { FlexModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
-import { from } from 'rxjs';
+import { ImageCardComponent } from './image-card/image-card.component';
+import { DataCardComponent } from './data-card/data-card.component';
 
 @NgModule({
   declarations: [
     SpecieComponent,
     SpecieListComponent,
     SpecieItemComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    ImageCardComponent,
+    DataCardComponent
   ],
   imports: [
     CommonModule,

@@ -6,3 +6,14 @@
 .example-header-image {   
     background-size: cover;
 }
+
+mat-list-item {
+    background-color: rgb(87, 109, 81);
+    border-radius: 7px;
+    margin-bottom: 8px;
+    padding-top: 0px !important;
+}
+
+.corrente {
+    background-color: #8AD676;
+}

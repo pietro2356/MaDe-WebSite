@@ -1,17 +1,8 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar [src]="specieItem.getMapIcoUrl()" [alt]="specieItem.nome_comune" />
-    <mat-card-title>{{specieItem.nome_comune}}</mat-card-title>
-    <mat-card-subtitle>{{specieItem.nome_latino}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image [src]="specieItem.getFotoUrl()" [alt]="specieItem.nome_comune">
-  <mat-card-content>
-    <p>
-      {{specieItem.getDescriptionShort(220)}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Esplora</button>
-    <button mat-button>Mappa</button>
-  </mat-card-actions>
-</mat-card>
+<mat-list-item [ngClass]="{'corrente': 'corrente'}">
+  <img matListAvatar [src]="specie.getImagePhotoIconUrl()">
+  <h4 matLine class="display-4">{{ specie.nome_comune }}</h4>
+  <p matLine>
+    <span>{{ specie.famiglia }}</span>
+    <span class="demo-2">-- {{ specie.genere }}</span>
+  </p>
+</mat-list-item>
