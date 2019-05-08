@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DbService } from '../common/db.service';
 import { Specie } from './model/specie.model';
 import { SpecieService } from './specie.service';
@@ -19,16 +19,17 @@ export class SpecieComponent implements OnInit {
   constructor(private dbService: DbService,
               private specieService: SpecieService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.corrente = -1;
-    this.specieSubscription = this.specieService.specieChanged
+    this.specieSubscription = this.specieService.specieAvailable
       .subscribe(
         (specie: Specie[]) => {
-          console.log('filto', specie)
+          console.log('filtro', specie)
           this.specie = specie;
           this.corrente = 0;
         }
       );
+    this.specieService.getSpecie();
   }
 
   getSpecie(index: number) {

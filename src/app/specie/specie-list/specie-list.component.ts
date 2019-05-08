@@ -19,6 +19,7 @@ export class SpecieListComponent implements OnInit {
               private dbService: DbService) { }
 
   ngOnInit() {
+    console.log('list', this.specie)
   }
 
   selezionaSpecie(indice: number) {
