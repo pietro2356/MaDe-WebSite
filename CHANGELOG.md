@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.2.0] (08-05-2019)
+> **BUILD STABLE**
+- Per compilare il progetto visionare il README.md.
+- Fase stabile del progetto. 
+- **Aggiornamenti:**
+    - Implementato il routing funzionante.
+    - Il progetto è in versione *STABLE* sul ramo master.
+    - Ricerca e filtro funzionante.
+- **TODO:**
+    - Modificare metodo di visualizzazione della lista.
+    - Creare collegamenti per switch dinamico tra le pagine.
+    - ***Implementare funzionalità dei bottoni***  **[IMPORTANT]**
+
+
 ## [0.0.1.0] (30-04-2019)
 > **STABLE**
 - Si stanno considerando due versioni del sito.

@@ -1,6 +1,4 @@
 # Progetto MaDe
-
-# Descrizione:
 Repository per il progetto MaDe
 Realizzazione di un sito web, per il riconoscimento della flora del monte Baldo
 
@@ -21,17 +19,26 @@ Realizzazione di un sito web, per il riconoscimento della flora del monte Baldo
  * [Popper](https://popper.js.org/)
 
 ## Istruction
+VERSIONE DI TEST: 
 ```
 git clone https://gitlab.com/made-4ci/made-website.git
 cd made-website
-
-git checkout 23-riscitutturacodice
+npm install
 ng serve
 ```
+COMPILAZIONE DEL PROGETTO:
+```
+git clone https://gitlab.com/made-4ci/made-website.git
+cd made-website
+npm install 
+ng build
+```
+
+
 
 ## Avvertenze
-- Il sito è ancora in fase di sviluppo, e si stanno considerando due versioni dello stesso.
-- Controllare il CHANGELOG.md per ulteriori informazioni.
+- Per consentire l'avvio dell'applicazione, Angular deve esere installato sulla macchina attuale.
+- **Controllare il CHANGELOG.md per ulteriori informazioni.**
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE.md)
