@@ -8,12 +8,12 @@
 }
 
 mat-list-item {
-    background-color: rgb(87, 109, 81);
+    background-color: rgb(118, 200, 92);
     border-radius: 7px;
     margin-bottom: 8px;
     padding-top: 0px !important;
 }
 
 .corrente {
-    background-color: #8AD676;
+    background-color: rgb(188, 235, 168);
 }

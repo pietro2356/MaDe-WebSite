@@ -16,7 +16,7 @@
     <div id="search-bar">
       <form [formGroup]="searchForm">
         <h1 id="ricerca">Flora del Monte Baldo</h1>
-        <div [fxLayout]="direction" fxLayoutAlign="center center">
+        <div fxLayoutAlign="center center">
           <input type="text" class="searchTerm" placeholder="Search..." formControlName="ricerca">
           <input type="image" src="assets/ico/cerca.png" class="searchButton" (click)="cerca()">
         </div>
