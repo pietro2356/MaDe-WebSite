@@ -10,6 +10,8 @@ import { Genere } from './model/genere.model';
 export class SpecieService {
 
   specie: Specie[];
+  specieDaVisualizzare: Specie[];
+
   famiglie: Famiglia[];
   generi: Genere[];
 
@@ -17,12 +19,10 @@ export class SpecieService {
   famiglieAvailable = new Subject<Famiglia[]>();
   generiAvailable = new Subject<Genere[]>();
 
-  specieChanged = new Subject<Specie[]>();
-
   constructor() { }
 
-  getSpecie(): Specie[] {
-    return this.specie.slice();
+  getSpecie() {
+    this.specieAvailable.next(this.specieDaVisualizzare);
   }
 
   getSpecieItem(index: number): Specie {
@@ -34,8 +34,8 @@ export class SpecieService {
   }
 
   setSpecie(specie: Specie[]) {
-    this.specie = specie.slice();
-    this.specieAvailable.next(this.specie);
+    this.specie = specie;
+    //this.specieAvailable.next(this.specie);
   }
 
   setFamiglie(famiglie: Famiglia[]) {
@@ -54,9 +54,13 @@ export class SpecieService {
     }));
   }
 
-  filtraSpecie(inizialeFamiglia: string) {
-    let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(inizialeFamiglia.toLowerCase()));
-    console.log('specie filtrate', specieFiltrate);
-    this.specieChanged.next(specieFiltrate);
+  filtraSpecie(inizialeFamiglia?: string) {
+    if (inizialeFamiglia) {
+      let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(inizialeFamiglia.toLowerCase()));
+      this.specieDaVisualizzare = specieFiltrate;
+    }
+    else {
+      this.specieDaVisualizzare = this.specie;
+    }
   }
 }

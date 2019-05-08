@@ -27,10 +27,15 @@ export class HomeComponent implements OnInit {
   }
 
   cerca() {
-    let stringaRicerca = this.searchForm.get('ricerca').value;
+    let stringaRicerca: string = this.searchForm.get('ricerca').value;
     console.log(stringaRicerca);
-    this.specieServie.filtraSpecie(stringaRicerca);
     this.router.navigateByUrl("/specie");
+    if (stringaRicerca) {
+      this.specieServie.filtraSpecie(stringaRicerca);
+    } 
+    else {
+      this.specieServie.filtraSpecie();
+    }
   }
 
 }
