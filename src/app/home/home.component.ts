@@ -3,7 +3,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
-import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
