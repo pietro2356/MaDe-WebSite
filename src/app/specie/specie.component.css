@@ -1,7 +1,9 @@
 .main-container {
     height: 91%;
 }
-
 .mat-sidenav-content{
     left: 20%;
+}
+.back_home{
+    margin: 2%;
 }

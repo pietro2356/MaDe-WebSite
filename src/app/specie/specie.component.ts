@@ -3,6 +3,8 @@ import { DbService } from '../common/db.service';
 import { Specie } from './model/specie.model';
 import { SpecieService } from './specie.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-specie',
@@ -17,7 +19,9 @@ export class SpecieComponent implements OnInit {
   specieSubscription: Subscription;
 
   constructor(private dbService: DbService,
-              private specieService: SpecieService) { }
+              private specieService: SpecieService,
+              private router: Router,
+              private location: Location) { }
 
   ngOnInit() {    
     this.corrente = -1;
@@ -39,5 +43,9 @@ export class SpecieComponent implements OnInit {
 
   selezionaSpecie(indice: number) {
     this.corrente = indice;
+  }
+
+  gotoPage(){
+    this.location.back();
   }
 }
