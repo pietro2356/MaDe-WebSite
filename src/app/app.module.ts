@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ProjectInfoComponent } from './project-info/project-info.component';
+import { ProjectInfoComponent } from './common/project-info/project-info.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,14 +12,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DbService } from './common/db.service';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProjectInfoComponent,
+    LegendaErbeComponent,
     FooterComponent
+
   ],
   imports: [
     CommonModule,
@@ -32,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     SpecieModule,
     AppRoutingModule
   ],
+  exports: [ProjectInfoComponent, LegendaErbeComponent],
   providers: [DbService],
   bootstrap: [AppComponent]
 })

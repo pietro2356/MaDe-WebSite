@@ -1,6 +1,18 @@
 <mat-list-item *ngIf="specie">
   <div id="menu">
     <h3>{{ specie.nome_comune }}</h3>
-    <p>{{ specie.descrizione }}</p>
+    <p><strong>Codice museo:</strong> {{ specie.cod_museo }}</p>
+    <p><strong>Codice museo numero:</strong> {{ specie.cod_museo_num }}</p>
+    <p><strong>Epiteto:</strong> {{ specie.epiteto }}</p>
+    <p><strong>Famiglia:</strong> {{ specie.famiglia }}</p>
+    <p><strong>Genere:</strong> {{ specie.genere }}</p>
+    <p><strong>Id:</strong> {{ specie.id }}</p>
+    <p><strong>Nome latino:</strong> {{ specie.nome_latino }}</p>
+    <p><strong>Quota max:</strong> {{ specie.quota_max }}</p>
+    <p><strong>Quota min:</strong> {{ specie.quota_min }}</p>
+    <p><strong>Riferimento:</strong> {{ specie.riferimento }}</p>
+    <p><strong>Sinonimi:</strong> {{ specie.sinonimi }}</p>
+    <p><strong>Subspecie:</strong> {{ specie.subsp }}</p>
+    <p><strong>Descrizione:</strong> {{ specie.descrizione }}</p>
   </div>
 </mat-list-item>

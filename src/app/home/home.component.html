@@ -1,13 +1,20 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true" fullscreen>
 
-  <mat-drawer #drawer class="example-sidenav" mode="over">
+  <mat-drawer #drawer_1 class="example-sidenav" mode="over">
     <app-project-info></app-project-info>
+  </mat-drawer>
+  <mat-drawer #drawer_2 class="example-sidenav" mode="over">
+      <app-legenda-erbe></app-legenda-erbe>
   </mat-drawer>
   <mat-drawer-content>
     <div class="container_img">
       <header class="header">
         <div class="header__div">
-          <img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna" (click)="drawer.toggle()">
+            <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna"></button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="drawer_1.toggle();">Legenda</button>
+              <button mat-menu-item (click)="drawer_2.toggle();">Sigle Erbe</button>
+            </mat-menu>
           <a href="http://www.fondazionemcr.it/"><img class="header__div__logo" src="../../assets/ico/LOGOFondazioneMCR_200.png" alt="LOGOFondazioneMCR_200"></a>
         </div>
       </header>
@@ -17,17 +24,21 @@
       <form [formGroup]="searchForm">
         <h1 id="ricerca">Flora del Monte Baldo</h1>
         <div fxLayoutAlign="center center">
+            <input type="image" src="assets/ico/cerca.png" class="searchButtonImage" (click)="cerca()">
           <input type="text" class="searchTerm" placeholder="Search..." formControlName="ricerca">
           <input type="image" src="assets/ico/cerca.png" class="searchButton" (click)="cerca()">
         </div>
       </form>
     </div>
 
-    <div fxLayout="column wrap" style="margin-top: 10%;">
-      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-famiglia.png" alt="icona-famiglia">
-      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-genere.png" alt="icona-genere">
-      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-altitudine.png" alt="icona-altitudine">
-      <img flex class="fa container__img__setting" aria-hidden="true" src="../../assets/ico/icona-specie.png" alt="icona-specie">
+    <div fxLayout="column wrap">
+      <div class="container_filter">
+        <ul>
+          <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaFamiglia()" src="../../assets/ico/icona-famiglia.png" alt="icona-famiglia"></li>
+          <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaGenere()" src="../../assets/ico/icona-genere.png" alt="icona-genere"></li>
+          <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaAltitudine()" src="../../assets/ico/icona-altitudine.png" alt="icona-altitudine"></li>
+          <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cerca()"src="../../assets/ico/icona-specie.png" alt="icona-specie"></li>
+        </ul>
+      </div>
     </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+</mat-drawer-content>

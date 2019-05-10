@@ -1,7 +1,14 @@
 .main-container {
     height: 91%;
 }
-
 .mat-sidenav-content{
     left: 20%;
+}
+.back_home{
+    margin: 2%;
+}
+@media (min-width: 320px) and (max-width: 767px){
+   .images, .data{
+       display: none;
+   }
 }
