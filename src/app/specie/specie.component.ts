@@ -49,7 +49,15 @@ export class SpecieComponent implements OnInit {
           this.corrente = 0;
         }
       );
-    this.specieService.getSpecie();
+    if(this.specie) {
+      this.specieService.getSpecie();
+    }
+    else
+    {
+      document.getElementById("message").style.color = "red";
+      document.getElementById("message").style.backgroundColor = "green";
+      document.getElementById("message").innerHTML = "Messaggio di errore";
+    }
   }
 
   getSpecie(index: number) {
