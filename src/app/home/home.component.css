@@ -66,7 +66,12 @@
     background-color: #eeeeee11;
     height: 50px;
 }
-
+.mat-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+}
 .header__div__img{
     float: right;
     height: 50px;

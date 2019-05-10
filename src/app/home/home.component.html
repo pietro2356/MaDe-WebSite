@@ -7,7 +7,11 @@
     <div class="container_img">
       <header class="header">
         <div class="header__div">
-          <img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna" (click)="drawer.toggle()">
+            <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna"></button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="drawer.toggle()">Legenda</button>
+              <button mat-menu-item>Sigle Erbe</button>
+            </mat-menu>
           <a href="http://www.fondazionemcr.it/"><img class="header__div__logo" src="../../assets/ico/LOGOFondazioneMCR_200.png" alt="LOGOFondazioneMCR_200"></a>
         </div>
       </header>
