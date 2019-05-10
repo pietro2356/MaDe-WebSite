@@ -10,7 +10,7 @@ import { Genere } from './model/genere.model';
 export class SpecieService {
 
   specie: Specie[];
-  specieDaVisualizzare: Specie[];
+  specieDaVisualizzare: Specie[];0
 
   famiglie: Famiglia[];
   generi: Genere[];
@@ -22,7 +22,10 @@ export class SpecieService {
   constructor() { }
 
   getSpecie() {
-    this.specieAvailable.next(this.specieDaVisualizzare);
+    if(this.specieDaVisualizzare.length > 0) this.specieAvailable.next(this.specieDaVisualizzare);
+    else {
+      alert("Messaggio di errore");
+    }
   }
 
   getSpecieItem(index: number): Specie {

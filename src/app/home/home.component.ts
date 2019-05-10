@@ -29,9 +29,16 @@ export class HomeComponent implements OnInit {
   cerca() {
     let stringaRicerca: string = this.searchForm.get('ricerca').value;
     console.log(stringaRicerca);
-    this.router.navigateByUrl("/specie");
     if (stringaRicerca) {
       this.specieServie.filtraSpecie(stringaRicerca);
+      if(this.specieServie.specieDaVisualizzare.length > 0) {
+          this.router.navigateByUrl("/specie");
+      }
+      else
+      {
+        alert("Messaggio di errore");
+        this.searchForm.reset("");
+      }
     } 
     else {
       this.specieServie.filtraSpecie();
