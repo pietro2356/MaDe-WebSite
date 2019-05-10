@@ -3,6 +3,9 @@
   <mat-drawer #drawer class="example-sidenav" mode="over">
     <app-project-info></app-project-info>
   </mat-drawer>
+  <mat-drawer #drawe_2 class="example-sidenav" mode="over">
+      <app-legenda-erbe></app-legenda-erbe>
+    </mat-drawer>
   <mat-drawer-content>
     <div class="container_img">
       <header class="header">
@@ -10,7 +13,7 @@
             <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna"></button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item (click)="drawer.toggle()">Legenda</button>
-              <button mat-menu-item>Sigle Erbe</button>
+              <button mat-menu-item (click)="drawer_2.toggle()">Sigle Erbe</button>
             </mat-menu>
           <a href="http://www.fondazionemcr.it/"><img class="header__div__logo" src="../../assets/ico/LOGOFondazioneMCR_200.png" alt="LOGOFondazioneMCR_200"></a>
         </div>
@@ -38,5 +41,4 @@
         </ul>
       </div>
     </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+</mat-drawer-content>
