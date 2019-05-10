@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.2.1] (10-05-2019) **STABLE**
+- Implementato menù per le legende.
+- Migliorata la ricerca.
+- **Alert message: IN SVILUPPO!**
+    - Si stanno implementando gli alert per la ricerca. 
+
 ## [0.0.2.0] (08-05-2019)
 > **BUILD STABLE**
 - Per compilare il progetto visionare il README.md.
