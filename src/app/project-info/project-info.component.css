@@ -43,3 +43,6 @@ th{
 #blu{
     color:#002b66;
 }
+@media (min-width: 320px) and (max-width: 767px){
+    
+}

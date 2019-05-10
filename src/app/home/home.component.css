@@ -115,4 +115,7 @@ ul{
         right: 0 !important;
         margin: auto !important;
     }
+    .mat-drawer{
+        width: 90%;
+    }
 }
