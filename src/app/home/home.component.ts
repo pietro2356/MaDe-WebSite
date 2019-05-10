@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   searchForm: FormGroup
   constructor(private dbService: DbService,
-              private specieServie: SpecieService,
+              private specieService: SpecieService,
               private router: Router) { }
 
   ngOnInit() {
@@ -30,8 +30,8 @@ export class HomeComponent implements OnInit {
     let stringaRicerca: string = this.searchForm.get('ricerca').value;
     console.log(stringaRicerca);
     if (stringaRicerca) {
-      this.specieServie.filtraSpecie(stringaRicerca);
-      if(this.specieServie.specieDaVisualizzare.length > 0) {
+      this.specieService.filtraSpecie(stringaRicerca);
+      if(this.specieService.specieDaVisualizzare.length > 0) {
           this.router.navigateByUrl("/specie");
       }
       else
@@ -41,8 +41,11 @@ export class HomeComponent implements OnInit {
       }
     } 
     else {
-      this.specieServie.filtraSpecie();
+      this.specieService.filtraSpecie();
     }
+  }
+  cercaGenere(){
+    
   }
 
 }

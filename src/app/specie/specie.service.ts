@@ -51,9 +51,9 @@ export class SpecieService {
     this.generiAvailable.next(this.generi);
   }
 
-  filtraGeneri(famiglia: string) {    
+  filtraGeneri(genere: string) {    
     this.generiAvailable.next(this.generi.filter(item => {
-      return item.famiglia == famiglia;
+      return item.genere == genere;
     }));
   }
 
