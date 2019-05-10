@@ -8,6 +8,8 @@ import { FlexModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageCardComponent } from './image-card/image-card.component';
 import { DataCardComponent } from './data-card/data-card.component';
+import { FooterComponent } from '../common/footer/footer.component';
+import { AppModule } from '../app.module';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,7 @@ import { DataCardComponent } from './data-card/data-card.component';
     CommonModule,
     MaterialModule,
     FlexModule,
-    ReactiveFormsModule,
-    CommonModule
+    ReactiveFormsModule
   ],
   exports: [
     SpecieComponent
