@@ -7,16 +7,6 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  stagger
-} from '@angular/animations';
-import { query } from '@angular/core/src/render3';
-
 
 @Component({
   selector: 'app-specie',
