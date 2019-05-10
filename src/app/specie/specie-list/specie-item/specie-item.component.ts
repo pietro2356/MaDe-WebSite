@@ -16,4 +16,8 @@ export class SpecieItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  onCmlickMe() {
+    alert(this.specie.nome_comune);
+  }
+
 }
