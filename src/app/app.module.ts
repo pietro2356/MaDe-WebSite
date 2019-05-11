@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { HomeComponent, DialogDataExampleDialog } from './home/home.component';
+import { HomeComponent, DialogData } from './home/home.component';
 import { ProjectInfoComponent } from './common/project-info/project-info.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,7 +22,7 @@ import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.compone
     ProjectInfoComponent,
     LegendaErbeComponent,
     FooterComponent,
-    DialogDataExampleDialog
+    DialogData
   ],
   imports: [
     CommonModule,
@@ -38,6 +38,6 @@ import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.compone
   exports: [ProjectInfoComponent, LegendaErbeComponent],
   providers: [DbService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogDataExampleDialog]
+  entryComponents: [DialogData]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
@@ -37,8 +37,9 @@ export class HomeComponent implements OnInit {
       }
       else
       {
-        this.dialog.open(DialogDataExampleDialog)
-        //alert("Messaggio di errore");
+        this.dialog.open(DialogData, {
+          data: "Messaggio di errore!!",
+        })
         this.searchForm.reset("");
       }
     } 
@@ -49,9 +50,10 @@ export class HomeComponent implements OnInit {
 }
 
 @Component({
-  selector: 'dialog-data-example-dialog',
-  templateUrl: 'dialog-data-example-dialog.html',
+  selector: 'dialog-data',
+  templateUrl: '../common/alert/dialog-data.html',
+  styleUrls: ['../common/alert/dialog-data.css']
 })
-export class DialogDataExampleDialog {
-  constructor() {}
+export class DialogData {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string) {}
 }
