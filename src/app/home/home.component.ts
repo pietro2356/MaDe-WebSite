@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     let stringaRicerca: string = this.searchForm.get('ricerca').value;
     console.log(stringaRicerca);
     if (stringaRicerca !== null) {
-      this.specieService.filtraSpecie(stringaRicerca);
+      this.specieService.filtraTutto(stringaRicerca);
       if(this.specieService.specieDaVisualizzare.length > 0) {
           this.router.navigateByUrl("/specie");
       }
@@ -44,7 +44,8 @@ export class HomeComponent implements OnInit {
       }
     } 
     else {
-      this.specieService.filtraSpecie();
+      //this.specieService.filtraSpecie();
+      this.specieService.filtraTutto();
     }
   }
 }
