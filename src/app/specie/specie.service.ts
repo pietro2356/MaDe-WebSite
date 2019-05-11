@@ -58,16 +58,6 @@ export class SpecieService {
     }));
   }
 
-  filtraSpecie(param?: string) {
-    if (param) {
-      let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(param.toLowerCase()));
-      //this.specieDaVisualizzare = specieFiltrate;
-    }
-    else {
-      this.specieDaVisualizzare = this.specie;
-    }
-  }
-
   filtraTutto(param?: string){
     if (param) {
       let datiFiltrati = this.specie.filter(item => { 
@@ -103,5 +93,24 @@ export class SpecieService {
     }else{
       this.specieDaVisualizzare = this.specie;
     }
+  }
+
+  /*Filtri bottoni laterali*/
+  filtraFamiglia(param: string) {
+      let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(param.toLowerCase()));
+      this.specieDaVisualizzare = specieFiltrate;
+  }
+
+  filtraGenere(param: string) {
+      let specieFiltrate = this.specie.filter(item => item.genere.toLowerCase().startsWith(param.toLowerCase()));
+      this.specieDaVisualizzare = specieFiltrate;
+  }
+
+  filtraAltitudine(q_min: number, q_max: number) {
+    let specieFiltrate = this.specie.filter(item => {
+      item.quota_max <= q_max,
+      item.quota_min >= q_min
+    })
+    this.specieDaVisualizzare = specieFiltrate;
   }
 }

@@ -1,1 +1,21 @@
-<h1>{{ data }}</h1>
+<h1>{{ data.message }}</h1>
+
+<div *ngIf="data.type == 'famiglia'" [formGroup]="searchForm">
+    <br />
+    <input type="text" formControlName="ricerca"/>
+    <input type="submit" value="Cerca" (click)="cercaFamiglia()"/>
+</div>
+
+<div *ngIf="data.type == 'genere'" [formGroup]="searchForm">
+        <br />
+        <input type="text" formControlName="ricerca" />
+        <input type="submit" value="Cerca" (click)="cercaGenere()"/>
+</div>
+
+<div *ngIf="data.type == 'altitudine'" [formGroup]="searchForm">
+        <br />
+        <input type="text" formControlName="ricerca2" placeholder="quota max"/>
+        <br />
+        <input type="text" formControlName="ricerca" placeholder="quota min"/>
+        <input type="submit" value="Cerca" (click)="cercaAltitudine()"/>
+</div>
