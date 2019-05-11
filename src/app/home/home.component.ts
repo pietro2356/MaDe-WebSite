@@ -1,9 +1,9 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, Inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
-import { AlertService } from '../common/alert/alertservice.service';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   constructor(private dbService: DbService,
               private specieService: SpecieService,
               private router: Router,
-              private alertService: AlertService) { }
+              public dialog: MatDialog) { }
 
   ngOnInit() {
     this.dbService.getSpecie();
@@ -30,18 +30,15 @@ export class HomeComponent implements OnInit {
   cerca() {
     let stringaRicerca: string = this.searchForm.get('ricerca').value;
     console.log(stringaRicerca);
-    if (stringaRicerca) {
+    if (stringaRicerca !== null) {
       this.specieService.filtraSpecie(stringaRicerca);
       if(this.specieService.specieDaVisualizzare.length > 0) {
           this.router.navigateByUrl("/specie");
-
       }
       else
       {
-        this.alertService.error("Messaggio di errore!");
+        this.dialog.open(DialogDataExampleDialog)
         //alert("Messaggio di errore");
-        console.log(this.alertService.getMessage());
-        
         this.searchForm.reset("");
       }
     } 
@@ -49,8 +46,12 @@ export class HomeComponent implements OnInit {
       this.specieService.filtraSpecie();
     }
   }
-  cercaGenere(){
-    
-  }
+}
 
+@Component({
+  selector: 'dialog-data-example-dialog',
+  templateUrl: 'dialog-data-example-dialog.html',
+})
+export class DialogDataExampleDialog {
+  constructor() {}
 }

@@ -57,9 +57,10 @@ export class SpecieService {
     }));
   }
 
-  filtraSpecie(inizialeFamiglia?: string) {
-    if (inizialeFamiglia) {
-      let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(inizialeFamiglia.toLowerCase()));
+  filtraSpecie(param?: string) {
+    if (param) {
+      let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(param.toLowerCase()));
+      //specieFiltrate.concat(this.specie.filter(item => item.famiglia.toLowerCase().includes(param)));
       this.specieDaVisualizzare = specieFiltrate;
     }
     else {
