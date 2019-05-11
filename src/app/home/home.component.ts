@@ -1,9 +1,9 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
-import { AlertService } from '../common/alert/alertservice.service';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   constructor(private dbService: DbService,
               private specieService: SpecieService,
               private router: Router,
-              private alertService: AlertService) { }
+              public dialog: MatDialog) { }
 
   ngOnInit() {
     this.dbService.getSpecie();
@@ -30,27 +30,31 @@ export class HomeComponent implements OnInit {
   cerca() {
     let stringaRicerca: string = this.searchForm.get('ricerca').value;
     console.log(stringaRicerca);
-    if (stringaRicerca) {
-      this.specieService.filtraSpecie(stringaRicerca);
+    if (stringaRicerca !== null) {
+      this.specieService.filtraTutto(stringaRicerca);
       if(this.specieService.specieDaVisualizzare.length > 0) {
           this.router.navigateByUrl("/specie");
-
       }
       else
       {
-        this.alertService.error("Messaggio di errore!");
-        //alert("Messaggio di errore");
-        console.log(this.alertService.getMessage());
-        
+        this.dialog.open(DialogData, {
+          data: "Messaggio di errore!!",
+        })
         this.searchForm.reset("");
       }
     } 
     else {
-      this.specieService.filtraSpecie();
+      //this.specieService.filtraSpecie();
+      this.specieService.filtraTutto();
     }
   }
-  cercaGenere(){
-    
-  }
+}
 
+@Component({
+  selector: 'dialog-data',
+  templateUrl: '../common/alert/dialog-data.html',
+  styleUrls: ['../common/alert/dialog-data.css']
+})
+export class DialogData {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string) {}
 }
