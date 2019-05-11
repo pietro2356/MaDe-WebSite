@@ -1,6 +1,21 @@
 <div class="back_home">
     <a href="javascript:void(0)" (click)="gotoPage()"><img src="../../assets/ico/icona-home.png" alt="icona-home"></a>
 </div>
+<div class="legenda">
+    <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="../../assets/ico/icona-montagne.png" alt="montagna"></button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="drawer_1.toggle();">Legenda</button>
+              <button mat-menu-item (click)="drawer_2.toggle();">Sigle Erbe</button>
+            </mat-menu>
+</div>
+
+    <mat-drawer #drawer_1 class="example-sidenav" mode="over">
+        <app-project-info></app-project-info>
+    </mat-drawer>
+  <mat-drawer #drawer_2 class="example-sidenav" mode="over">
+      <app-legenda-erbe></app-legenda-erbe>
+  </mat-drawer>
+  
 <div class="container">
     <div class="ris" fxFlex="33.3%" fxFlex.xs="100%">
         <app-specie-list class="specie1" *ngIf="specie" (onChangeSpecieIndex)="selezionaSpecie($event)" [specie]="specie" [corrente]="corrente"></app-specie-list>

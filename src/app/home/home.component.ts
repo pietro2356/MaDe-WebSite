@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
       else
       {
         this.dialog.open(DialogData, {
-          data: "Messaggio di errore!!",
+          data: "Fiore o Pianta non trovata!!",
         })
         this.searchForm.reset("");
       }
