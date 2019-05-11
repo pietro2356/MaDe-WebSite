@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2.2] (11-05-2019) **COMPILATION OK!**
+> Implementato messaggio di errore per ricerca inesatta.
+- La ricerca adesso si basa sul **nome comune** delle piante.
+- **TODO:**
+    - ***Implementare funzionalità dei bottoni.***  **[IMPORTANT]**
+    - ***Implementare ricerca generale.***  **[IMPORTANT]**
+
 ## [0.0.2.1] (10-05-2019) **STABLE**
 - Implementato menù per le legende.
 - Migliorata la ricerca.

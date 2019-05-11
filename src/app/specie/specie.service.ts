@@ -70,6 +70,7 @@ export class SpecieService {
 
   filtraTutto(param?: string){
     if (param) {
+      ///FIXME: TROVARE UN MODO PER ESEGUIRE LA RICERCA SU TUTTI GLI ELEMENTI.
       let datiFiltrati = this.specie.filter(item => { 
       item.nome_comune.toLowerCase().startsWith(param.toLowerCase()),
       item.nome_latino.toLowerCase().startsWith(param.toLowerCase()),
@@ -99,7 +100,7 @@ export class SpecieService {
         console.log("fil");
         console.log("fil" + element);
       });
-      this.specieDaVisualizzare = desc;
+      this.specieDaVisualizzare = nomeF;
     }else{
       this.specieDaVisualizzare = this.specie;
     }

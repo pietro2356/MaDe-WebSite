@@ -48,6 +48,22 @@ export class HomeComponent implements OnInit {
       this.specieService.filtraTutto();
     }
   }
+
+  cercaFamiglia(){
+    this.dialog.open(DialogData, {
+      data: "Cerca Famiglia!",
+    })
+  }
+  cercaGenere(){
+    this.dialog.open(DialogData, {
+      data: "Cerca Genere!",
+    })
+  }
+  cercaAltitudine(){
+    this.dialog.open(DialogData, {
+      data: "Cerca Altitudine!",
+    })
+  }
 }
 
 @Component({

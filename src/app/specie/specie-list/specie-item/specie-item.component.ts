@@ -14,6 +14,11 @@ export class SpecieItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
+  }
+
+  onClickMe(){
+    console.log("Mi hai cliccato!");
   }
 
 }

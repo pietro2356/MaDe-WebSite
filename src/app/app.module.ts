@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, Component } from '@angular/core';
+import { CommonModule } from '../app/common/common.module';
 import { AppComponent } from './app.component';
 import { HomeComponent, DialogData } from './home/home.component';
 import { ProjectInfoComponent } from './common/project-info/project-info.component';
@@ -12,16 +12,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DbService } from './common/db.service';
-import { FooterComponent } from './common/footer/footer.component';
 import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectInfoComponent,
-    LegendaErbeComponent,
-    FooterComponent,
     DialogData
   ],
   imports: [
