@@ -59,7 +59,7 @@ ng build --prod=true
 > * **Filippo Prosser, Alessio Bertolli & Francesco Festi**
 > * **Flora illustrata del Monte Baldo**
 > * **edizioni osiride, 2009**
-![Copertina](src/assets/ico/FloraMonteBaldoCopertina.JPG)**
+![Copertina](src/assets/ico/FloraMonteBaldoCopertina.JPG)
 
 
 ## License
