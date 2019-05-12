@@ -107,10 +107,8 @@ export class SpecieService {
   }
 
   filtraAltitudine(q_min: number, q_max: number) {
-    let specieFiltrate = this.specie.filter(item => {
-      item.quota_max <= q_max,
-      item.quota_min >= q_min
-    })
-    this.specieDaVisualizzare = specieFiltrate;
+    let specieFiltarateQMin = this.specie.filter(item => item.quota_min >= q_min)
+    let specieFiltarate = specieFiltarateQMin.filter(item => item.quota_max <= q_max);
+    this.specieDaVisualizzare = specieFiltarate;
   }
 }

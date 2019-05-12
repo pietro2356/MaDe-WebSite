@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common'
+
 @Component({
   selector: 'app-project-info',
   templateUrl: './project-info.component.html',
