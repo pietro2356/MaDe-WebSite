@@ -1,6 +1,7 @@
 <div class="back_home">
     <a href="javascript:void(0)" (click)="gotoPage()"><img src="../../assets/ico/icona-home.png" alt="icona-home"></a>
 </div>
+
 <div class="container">
     <div class="ris" fxFlex="33.3%" fxFlex.xs="100%">
         <app-specie-list class="specie1" *ngIf="specie" (onChangeSpecieIndex)="selezionaSpecie($event)" [specie]="specie" [corrente]="corrente"></app-specie-list>

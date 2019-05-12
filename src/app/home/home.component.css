@@ -60,6 +60,7 @@
     opacity: 0.8;
     padding-left: 15%;
     padding-bottom: 2%; 
+    outline: none;
 }
 
 .header{
@@ -95,9 +96,15 @@ ul{
     list-style: none;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 481px) {
+    .example-container{
+        background: url('../../assets/ico/provastrisce.jpg');
+        background-size: cover;
+        background-position: center; 
+    }
     #search-bar{
-        width: 80%;
+        top: 20% !important;
+        width: 80% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
@@ -106,21 +113,21 @@ ul{
     #ricerca{
         left: 0 !important;
         right: 0 !important;
-        text-align: start;
+        text-align: start !important;
     }
     .container__img__setting{
-        width: 18%;
+        width: 18% !important;
         padding: 2.5% !important;
-        float: right;
+        float: right !important;
     }
     .container_filter{
-        position: absolute;
-        bottom: 35% !important;
+        position: absolute !important;
+        bottom: 30% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
     }
     .mat-drawer{
-        width: 90%;
+        width: 90% !important;
     }
 }

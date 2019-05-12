@@ -1,1 +1,35 @@
-<h1>{{ data }}</h1>
+<h1>{{ data.message }}</h1>
+
+<div *ngIf="data.type == 'famiglia'" [formGroup]="searchForm">
+        <div id="search-bar">
+                <form [formGroup]="searchForm">
+                        <div fxLayoutAlign="center center">
+                                <input type="text" class="searchTerm" placeholder="Search..." formControlName="ricerca">
+                                <input type="image" src="../../../assets/ico/cerca.png" class="searchButton" (click)="cercaFamiglia()">
+                        </div>
+                </form>
+        </div>
+</div>
+
+<div *ngIf="data.type == 'genere'" [formGroup]="searchForm">
+        <div id="search-bar">
+                <form [formGroup]="searchForm">
+                        <div fxLayoutAlign="center center">
+                                <input type="text" class="searchTerm" placeholder="Search..." formControlName="ricerca">
+                                <input type="image" src="../../../assets/ico/cerca.png" class="searchButton" (click)="cercaGenere()">
+                        </div>
+                </form>
+        </div>
+</div>
+
+<div *ngIf="data.type == 'altitudine'" [formGroup]="searchForm">
+        <div id="search-bar">
+                <form [formGroup]="searchForm">
+                        <div fxLayoutAlign="center center">
+                                <input type="text" class="searchTerm" id="q_mim" placeholder="Quota minima" formControlName="ricerca">
+                                <input type="text" class="searchTerm" id="q_max" placeholder="Quota massima" formControlName="ricerca2">
+                                <input type="image" src="../../../assets/ico/cerca.png" class="searchButton" (click)="cercaAltitudine()">
+                        </div>
+                </form>
+        </div>
+</div>

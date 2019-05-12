@@ -12,17 +12,17 @@ import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
 })
 
 export class HomeComponent implements OnInit {
-  searchForm: FormGroup
+  searchForm: FormGroup;
   constructor(private dbService: DbService,
               private specieService: SpecieService,
               private router: Router,
-              public dialog: MatDialog) { }
+              private dialog: MatDialog) { }
 
   ngOnInit() {
     this.dbService.getSpecie();
     this.searchForm = new FormGroup(
       {
-        'ricerca': new FormControl()
+        'ricerca': new FormControl(),
       }
     )
   }
@@ -38,7 +38,10 @@ export class HomeComponent implements OnInit {
       else
       {
         this.dialog.open(DialogData, {
-          data: "Messaggio di errore!!",
+          data: {
+            message: "Fiore o Pianta non trovata!!",
+            type: null
+          }
         })
         this.searchForm.reset("");
       }
@@ -49,19 +52,30 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  cercaFamiglia(){
+  cercaFamiglia() {
     this.dialog.open(DialogData, {
-      data: "Cerca Famiglia!",
+      data: {
+        message: "Cerca per Famiglia",
+        type: "famiglia"
+      }
     })
   }
-  cercaGenere(){
+
+  cercaGenere() {
     this.dialog.open(DialogData, {
-      data: "Cerca Genere!",
+      data: {
+        message: "Cerca per Genere",
+        type: "genere"
+      }
     })
   }
-  cercaAltitudine(){
+
+  cercaAltitudine() {
     this.dialog.open(DialogData, {
-      data: "Cerca Altitudine!",
+      data: {
+        message: "Cerca per Altitudine",
+        type: "altitudine"
+      }
     })
   }
 }
@@ -72,5 +86,87 @@ export class HomeComponent implements OnInit {
   styleUrls: ['../common/alert/dialog-data.css']
 })
 export class DialogData {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: string) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData, 
+                                       private specieService: SpecieService, 
+                                       private router: Router, 
+                                       private dialog: MatDialog) {}
+
+  searchForm: FormGroup;
+
+  ngOnInit() {
+    this.searchForm = new FormGroup(
+      {
+        'ricerca': new FormControl(),
+        'ricerca2': new FormControl()
+      }
+    )
+  }
+
+  cercaFamiglia() {
+    let stringaRicerca: string = this.searchForm.get('ricerca').value;
+    console.log(stringaRicerca);
+    if (stringaRicerca !== null) {
+      this.specieService.filtraFamiglia(stringaRicerca)
+      if(this.specieService.specieDaVisualizzare.length > 0) {
+          this.dialog.closeAll();
+          this.router.navigateByUrl("/specie");
+      }
+      else
+      {
+        this.dialog.open(DialogData, {
+          data: {
+            message: "Nessun fiore o pianta trovato con la Famiglia specificata",
+            type: null
+          }
+        })
+        this.searchForm.reset("");
+      }
+    }
+  }
+
+  cercaGenere() {
+    let stringaRicerca: string = this.searchForm.get('ricerca').value;
+    console.log(stringaRicerca);
+    if (stringaRicerca !== null) {
+      this.specieService.filtraGenere(stringaRicerca)
+      if(this.specieService.specieDaVisualizzare.length > 0) {
+          this.dialog.closeAll();
+          this.router.navigateByUrl("/specie");
+      }
+      else
+      {
+        this.dialog.open(DialogData, {
+          data: {
+            message: "Nessun fiore o pianta trovato con il Genere specificato",
+            type: null
+          }
+        })
+        this.searchForm.reset("");
+      }
+    }
+  }
+
+  cercaAltitudine() {
+    let quotaMin: string = this.searchForm.get('ricerca').value;
+    let quotaMax: string = this.searchForm.get('ricerca2').value;
+    console.log('q min',quotaMin);
+    console.log('q max', quotaMax);
+    if (quotaMin != null && quotaMax != null) {
+      this.specieService.filtraAltitudine(Number.parseInt(quotaMin), Number.parseInt(quotaMax));
+      if(this.specieService.specieDaVisualizzare.length > 0) {
+          this.dialog.closeAll();
+          this.router.navigateByUrl("/specie");
+      }
+      else
+      {
+        this.dialog.open(DialogData, {
+          data: {
+            message: "Nessun fiore o pianta trovato con le quote specificate",
+            type: null
+          }
+        })
+        this.searchForm.reset("");
+      }
+    }
+  }
 }
