@@ -10,7 +10,7 @@ import { Genere } from './model/genere.model';
 export class SpecieService {
 
   specie: Specie[];
-  specieDaVisualizzare: Specie[];
+  specieDaVisualizzare: Specie[] = [];
   specieTemporane: Specie[];
 
   famiglie: Famiglia[];
@@ -59,7 +59,7 @@ export class SpecieService {
   }
 
   filtraTutto(param?: string){
-    if (param) {
+    /*if (param) {
       let datiFiltrati = this.specie.filter(item => { 
       item.nome_comune.toLowerCase().startsWith(param.toLowerCase()),
       item.nome_latino.toLowerCase().startsWith(param.toLowerCase()),
@@ -91,6 +91,28 @@ export class SpecieService {
       });
       this.specieDaVisualizzare = desc;
     }else{
+      this.specieDaVisualizzare = this.specie;
+    }*/
+
+    if(param) {
+      this.specie.forEach(element => {
+        if(element.descrizione.toLowerCase().includes(param.toLowerCase()) ||
+          element.epiteto.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.famiglia.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.genere.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.id.toString() === param ||
+          element.nome_comune.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.nome_latino.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.quota_max.toString() === param ||
+          element.quota_min.toString() === param ||
+          element.riferimento.toLowerCase().includes(param.toLowerCase()) ||
+          element.sinonimi.toLowerCase().includes(param.toLowerCase()) ||
+          element.subsp.toLowerCase().startsWith(param.toLowerCase())) {
+            this.specieDaVisualizzare.push(element);
+          }
+      });
+    }
+    else {
       this.specieDaVisualizzare = this.specie;
     }
   }
