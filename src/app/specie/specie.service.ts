@@ -59,6 +59,7 @@ export class SpecieService {
   }
 
   filtraTutto(param?: string){
+    this.specieDaVisualizzare = [];
     if(param) {
       this.specie.forEach(element => {
         if(element.descrizione.toLowerCase().includes(param.toLowerCase()) ||
