@@ -10,7 +10,7 @@ import { Genere } from './model/genere.model';
 export class SpecieService {
 
   specie: Specie[];
-  specieDaVisualizzare: Specie[];
+  specieDaVisualizzare: Specie[] = [];
   specieTemporane: Specie[];
 
   famiglie: Famiglia[];
@@ -59,38 +59,25 @@ export class SpecieService {
   }
 
   filtraTutto(param?: string){
-    if (param) {
-      let datiFiltrati = this.specie.filter(item => { 
-      item.nome_comune.toLowerCase().startsWith(param.toLowerCase()),
-      item.nome_latino.toLowerCase().startsWith(param.toLowerCase()),
-      item.id.toString().startsWith(param.toLowerCase()),
-      item.quota_max.toString().startsWith(param.toLowerCase()),
-      item.quota_min.toString().startsWith(param.toLowerCase()),
-      item.riferimento.toLowerCase().toString().startsWith(param.toLowerCase()),
-      item.sinonimi.toLowerCase().startsWith(param.toLowerCase()),
-      item.descrizione.toLowerCase().startsWith(param.toLowerCase()),
-      item.subsp.toLowerCase().startsWith(param.toLowerCase())
+    if(param) {
+      this.specie.forEach(element => {
+        if(element.descrizione.toLowerCase().includes(param.toLowerCase()) ||
+          element.epiteto.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.famiglia.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.genere.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.id.toString() === param ||
+          element.nome_comune.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.nome_latino.toLowerCase().startsWith(param.toLowerCase()) ||
+          element.quota_max.toString() === param ||
+          element.quota_min.toString() === param ||
+          element.riferimento.toLowerCase().includes(param.toLowerCase()) ||
+          element.sinonimi.toLowerCase().includes(param.toLowerCase()) ||
+          element.subsp.toLowerCase().startsWith(param.toLowerCase())) {
+            this.specieDaVisualizzare.push(element);
+          }
       });
-      let x = this.specie.filter(item => item.nome_comune.toLowerCase().startsWith(param.toLowerCase()))
-
-      let nomeF = this.specie.filter(item => item.nome_comune.toLowerCase().includes(param.toLowerCase()));
-      let nomeL = this.specie.filter(item => item.nome_latino.toLowerCase().startsWith(param.toLowerCase()));
-      let id = this.specie.filter(item => item.id.toString().toLowerCase().startsWith(param.toLowerCase()));
-      let qMin = this.specie.filter(item => item.quota_min.toString().startsWith(param.toLowerCase()));
-      let qMax = this.specie.filter(item => item.quota_max.toString().startsWith(param.toLowerCase()));
-      let rife = this.specie.filter(item => item.riferimento.toLowerCase().startsWith(param.toLowerCase()));
-      let sin = this.specie.filter(item => item.sinonimi.toLowerCase().startsWith(param.toLowerCase()));
-      let desc = this.specie.filter(item => item.descrizione.toLowerCase().includes(param.toLowerCase()));
-      let sup = this.specie.filter(item => item.subsp.toLowerCase().startsWith(param.toLowerCase()));
-
-      //this.specieTemporane = this.specieTemporane.concat(nomeF, nomeL, id, qMin, qMax, rife, sin, desc, sup);
-      ///TODO: DA FIXARE 
-      datiFiltrati.forEach(element => {
-        console.log("fil");
-        console.log("fil" + element);
-      });
-      this.specieDaVisualizzare = desc;
-    }else{
+    }
+    else {
       this.specieDaVisualizzare = this.specie;
     }
   }
@@ -107,10 +94,8 @@ export class SpecieService {
   }
 
   filtraAltitudine(q_min: number, q_max: number) {
-    let specieFiltrate = this.specie.filter(item => {
-      item.quota_max <= q_max,
-      item.quota_min >= q_min
-    })
-    this.specieDaVisualizzare = specieFiltrate;
+    let specieFiltarateQMin = this.specie.filter(item => item.quota_min >= q_min)
+    let specieFiltarate = specieFiltarateQMin.filter(item => item.quota_max <= q_max);
+    this.specieDaVisualizzare = specieFiltarate;
   }
 }

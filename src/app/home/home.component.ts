@@ -116,7 +116,7 @@ export class DialogData {
         this.dialog.open(DialogData, {
           data: {
             message: "Nessun fiore o pianta trovato con la famiglia specificata",
-            input: false
+            type: null
           }
         })
         this.searchForm.reset("");
@@ -138,7 +138,7 @@ export class DialogData {
         this.dialog.open(DialogData, {
           data: {
             message: "Nessun fiore o pianta trovato con il genere specificato",
-            input: false
+            type: null
           }
         })
         this.searchForm.reset("");
@@ -151,8 +151,8 @@ export class DialogData {
     let quotaMax: string = this.searchForm.get('ricerca2').value;
     console.log('q min',quotaMin);
     console.log('q max', quotaMax);
-    if (quotaMin !== null && quotaMax != null) {
-      this.specieService.filtraAltitudine(Number.parseInt(quotaMin), Number.parseInt(quotaMax))
+    if (quotaMin != null && quotaMax != null) {
+      this.specieService.filtraAltitudine(Number.parseInt(quotaMin), Number.parseInt(quotaMax));
       if(this.specieService.specieDaVisualizzare.length > 0) {
           this.dialog.closeAll();
           this.router.navigateByUrl("/specie");
@@ -162,7 +162,7 @@ export class DialogData {
         this.dialog.open(DialogData, {
           data: {
             message: "Nessun fiore o pianta trovato con le quote specificate",
-            input: false
+            type: null
           }
         })
         this.searchForm.reset("");
