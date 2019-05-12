@@ -38,16 +38,16 @@ ng build --prod=true
 - ***Controllare il [CHANGELOG.md](CHANGELOG.md) per ulteriori informazioni.***
 
 # Team di sviluppo
-> **Programmatori:**
-    > * **Rocchio Pietro**
-    > * **Alberti Davide**
-    > * **Cerbaro Jessica**
-    > * **Baroni Michelangelo**
-    > * **Battistoni Pietro**
+> - **Programmatori:**
+>   - **Rocchio Pietro**
+>   - **Alberti Davide**
+>   - **Cerbaro Jessica**
+>   - **Baroni Michelangelo**
+>   - **Battistoni Pietro**
 
-> **Grafici:**
-    > * **Tomasini Valeria**
-    > * **Folgarait Cecilia**
+> - **Grafici:**
+>   - **Tomasini Valeria**
+>   - **Folgarait Cecilia**
 
 ## Flora illustrata del Monte Baldo &copy;: 
 > * **Filippo Prosser, Alessio Bertolli & Francesco Festi**
