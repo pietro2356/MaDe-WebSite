@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
   cercaFamiglia() {
     this.dialog.open(DialogData, {
       data: {
-        message: "Cerca per famiglia",
+        message: "Cerca per Famiglia",
         type: "famiglia"
       }
     })
@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
   cercaGenere() {
     this.dialog.open(DialogData, {
       data: {
-        message: "Cerca per genere",
+        message: "Cerca per Genere",
         type: "genere"
       }
     })
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
   cercaAltitudine() {
     this.dialog.open(DialogData, {
       data: {
-        message: "Cerca per altitudine",
+        message: "Cerca per Altitudine",
         type: "altitudine"
       }
     })
@@ -115,7 +115,7 @@ export class DialogData {
       {
         this.dialog.open(DialogData, {
           data: {
-            message: "Nessun fiore o pianta trovato con la famiglia specificata",
+            message: "Nessun fiore o pianta trovato con la Famiglia specificata",
             type: null
           }
         })
@@ -137,7 +137,7 @@ export class DialogData {
       {
         this.dialog.open(DialogData, {
           data: {
-            message: "Nessun fiore o pianta trovato con il genere specificato",
+            message: "Nessun fiore o pianta trovato con il Genere specificato",
             type: null
           }
         })
