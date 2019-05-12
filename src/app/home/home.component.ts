@@ -4,6 +4,7 @@ import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
+import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   selector: 'app-home',
@@ -93,6 +94,9 @@ export class DialogData {
 
   searchForm: FormGroup;
 
+  message: any;
+  type: any;
+  
   ngOnInit() {
     this.searchForm = new FormGroup(
       {
