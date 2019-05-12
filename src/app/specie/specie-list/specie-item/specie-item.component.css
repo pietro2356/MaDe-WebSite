@@ -22,6 +22,9 @@ mat-list-item {
     padding: 0;
     right: 0;
 }
+h4{
+    font-family: 'Brandon Text Regular';
+}
 @media (min-width: 500px){
     .mat-raised-button{
         display: none;
