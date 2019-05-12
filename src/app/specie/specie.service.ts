@@ -59,41 +59,6 @@ export class SpecieService {
   }
 
   filtraTutto(param?: string){
-    /*if (param) {
-      let datiFiltrati = this.specie.filter(item => { 
-      item.nome_comune.toLowerCase().startsWith(param.toLowerCase()),
-      item.nome_latino.toLowerCase().startsWith(param.toLowerCase()),
-      item.id.toString().startsWith(param.toLowerCase()),
-      item.quota_max.toString().startsWith(param.toLowerCase()),
-      item.quota_min.toString().startsWith(param.toLowerCase()),
-      item.riferimento.toLowerCase().toString().startsWith(param.toLowerCase()),
-      item.sinonimi.toLowerCase().startsWith(param.toLowerCase()),
-      item.descrizione.toLowerCase().startsWith(param.toLowerCase()),
-      item.subsp.toLowerCase().startsWith(param.toLowerCase())
-      });
-      let x = this.specie.filter(item => item.nome_comune.toLowerCase().startsWith(param.toLowerCase()))
-
-      let nomeF = this.specie.filter(item => item.nome_comune.toLowerCase().includes(param.toLowerCase()));
-      let nomeL = this.specie.filter(item => item.nome_latino.toLowerCase().startsWith(param.toLowerCase()));
-      let id = this.specie.filter(item => item.id.toString().toLowerCase().startsWith(param.toLowerCase()));
-      let qMin = this.specie.filter(item => item.quota_min.toString().startsWith(param.toLowerCase()));
-      let qMax = this.specie.filter(item => item.quota_max.toString().startsWith(param.toLowerCase()));
-      let rife = this.specie.filter(item => item.riferimento.toLowerCase().startsWith(param.toLowerCase()));
-      let sin = this.specie.filter(item => item.sinonimi.toLowerCase().startsWith(param.toLowerCase()));
-      let desc = this.specie.filter(item => item.descrizione.toLowerCase().includes(param.toLowerCase()));
-      let sup = this.specie.filter(item => item.subsp.toLowerCase().startsWith(param.toLowerCase()));
-
-      //this.specieTemporane = this.specieTemporane.concat(nomeF, nomeL, id, qMin, qMax, rife, sin, desc, sup);
-      ///TODO: DA FIXARE 
-      datiFiltrati.forEach(element => {
-        console.log("fil");
-        console.log("fil" + element);
-      });
-      this.specieDaVisualizzare = desc;
-    }else{
-      this.specieDaVisualizzare = this.specie;
-    }*/
-
     if(param) {
       this.specie.forEach(element => {
         if(element.descrizione.toLowerCase().includes(param.toLowerCase()) ||
