@@ -29,6 +29,6 @@ h4 {
 
 @media (min-width: 500px){
     .mat-raised-button{
-        display: block;
+        display: none;
     }
 }
