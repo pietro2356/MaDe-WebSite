@@ -12,12 +12,14 @@ import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DbService } from './common/db.service';
 import { CommonComponentModule } from './common/common-component.module';
+import { DialogDataSpecie } from './specie/specie-list/specie-item/specie-item.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DialogData
+    DialogData,
+    DialogDataSpecie
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,6 @@ import { CommonComponentModule } from './common/common-component.module';
   ],
   providers: [DbService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogData]
+  entryComponents: [DialogData, DialogDataSpecie]
 })
 export class AppModule { }
