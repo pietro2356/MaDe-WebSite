@@ -52,6 +52,20 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  cercaImage() {
+    this.specieService.filtraSpecie();
+    this.router.navigateByUrl("/specie");
+  }
+
+  searchImage() {
+    this.dialog.open(DialogData, {
+      data: {
+        message: "Work in progress ...",
+        type: "cercaImage"
+      }
+    })
+  }
+
   cercaFamiglia() {
     this.dialog.open(DialogData, {
       data: {
