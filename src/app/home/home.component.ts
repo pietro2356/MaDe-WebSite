@@ -78,6 +78,11 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  cercaImage() {
+    this.specieService.filtraSpecie();
+    this.router.navigateByUrl("/specie");
+  }
 }
 
 @Component({
