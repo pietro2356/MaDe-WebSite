@@ -1,9 +1,7 @@
-import { Component, OnInit, Input, NgModule } from '@angular/core';
-import { DbService } from '../common/db.service';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { Specie } from './model/specie.model';
 import { SpecieService } from './specie.service';
 import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -19,9 +17,7 @@ export class SpecieComponent implements OnInit {
 
   specieSubscription: Subscription;
 
-  constructor(private dbService: DbService,
-              private specieService: SpecieService,
-              private router: Router,
+  constructor(private specieService: SpecieService,
               private location: Location) { }
 
   ngOnInit() {    
@@ -40,7 +36,6 @@ export class SpecieComponent implements OnInit {
   selezionaSpecie(indice: number) {
     this.corrente = indice;
   }
-
   gotoPage(){
     this.location.back();
   }
