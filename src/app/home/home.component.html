@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true" fullscreen>
+<mat-drawer-container class="example-container clearfix" [hasBackdrop]="true" fullscreen>
   <mat-drawer #drawer_1 class="example-sidenav" mode="over">
     <app-project-info></app-project-info>
   </mat-drawer>
@@ -23,7 +23,7 @@
       <form [formGroup]="searchForm">
         <h1 id="ricerca">Flora del Monte Baldo</h1>
         <div fxLayoutAlign="center center">
-            <input type="image" src="assets/ico/cerca.png" class="searchButtonImage" (click)="cerca()">
+            <input type="image" src="assets/ico/cerca.png" class="searchButtonImage" (click)="cercaImage()">
             <input type="text" class="searchTerm" placeholder="Search..." formControlName="ricerca">
           <input type="image" src="assets/ico/cerca.png" class="searchButton" (click)="cerca()">
         </div>
@@ -36,7 +36,7 @@
           <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaFamiglia()" src="../../assets/ico/icona-famiglia.png" alt="icona-famiglia"></li>
           <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaGenere()" src="../../assets/ico/icona-genere.png" alt="icona-genere"></li>
           <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaAltitudine()" src="../../assets/ico/icona-altitudine.png" alt="icona-altitudine"></li>
-          <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cerca()"src="../../assets/ico/icona-specie.png" alt="icona-specie"></li>
+          <li><input type="image" flex class="fa container__img__setting" aria-hidden="true" (click)="cercaSpecie()"src="../../assets/ico/icona-specie.png" alt="icona-specie"></li>
         </ul>
       </div>
     </div>

@@ -99,4 +99,8 @@ export class SpecieService {
     let specieFiltarate = specieFiltarateQMin.filter(item => item.quota_max <= q_max);
     this.specieDaVisualizzare = specieFiltarate;
   }
+
+  filtraSpecie() {
+    this.specieDaVisualizzare = this.specie;
+  }
 }

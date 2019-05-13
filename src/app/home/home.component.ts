@@ -78,6 +78,20 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  cercaSpecie(){
+    this.specieService.filtraSpecie();
+    this.router.navigateByUrl("/specie");
+  }
+
+  cercaImage() {
+    this.dialog.open(DialogData, {
+      data: {
+        message: "Work in progress...",
+        type: "cercaImage"
+      }
+    });
+  }
 }
 
 @Component({
