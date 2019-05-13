@@ -3,7 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -82,6 +82,15 @@ export class HomeComponent implements OnInit {
   cercaImage() {
     this.specieService.filtraSpecie();
     this.router.navigateByUrl("/specie");
+  }
+
+  cercaButtonImage() {
+    this.dialog.open(DialogData, {
+      data: {
+        message: "Ricerca tramite foto",
+        type: "carcaImage"
+      }
+    })
   }
 }
 
