@@ -13,15 +13,12 @@ import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DbService } from './common/db.service';
 import { FooterComponent } from './common/footer/footer.component';
-import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.component'
+import { CommonComponentModule } from './common/common-component.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectInfoComponent,
-    LegendaErbeComponent,
-    FooterComponent,
     DialogData
   ],
   imports: [
@@ -33,9 +30,9 @@ import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.compone
     FlexLayoutModule,
     ReactiveFormsModule,
     SpecieModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonComponentModule
   ],
-  exports: [ProjectInfoComponent, LegendaErbeComponent],
   providers: [DbService],
   bootstrap: [AppComponent],
   entryComponents: [DialogData]

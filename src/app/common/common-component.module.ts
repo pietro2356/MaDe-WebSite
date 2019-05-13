@@ -9,9 +9,11 @@ import { LegendaErbeComponent } from './legenda-erbe/legenda-erbe.component';
     FooterComponent,
     LegendaErbeComponent
   ],
-  exports:[
-    CommonModule
+  exports:[    
+    ProjectInfoComponent,
+    FooterComponent,
+    LegendaErbeComponent
   ]
 })
 
-export class CommonModule { }
+export class CommonComponentModule { }
