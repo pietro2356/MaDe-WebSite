@@ -2,7 +2,9 @@
     height: auto;
     width: auto;
 }
-
+.mat-menu-item{
+    font-family: 'Brandon Text Regular';
+}
 .example-container{
     background: url('src/assets/ico/HOME_SFONDO.jpg');
     background-repeat: no-repeat;
