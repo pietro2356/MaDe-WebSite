@@ -3,7 +3,11 @@ mat-drawer-container {
     max-width: auto;
     max-height: 800px;
 }
-
+@media (min-width: 320px) and (max-width: 481px){
+    mat-drawer-container{
+        max-height: 30pc;
+    }
+}
 mat-list-item img {
     max-width: 280px;
     max-height: auto;
