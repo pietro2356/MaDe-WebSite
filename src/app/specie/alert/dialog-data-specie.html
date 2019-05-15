@@ -2,6 +2,9 @@
     <mat-list-item>
         <div id="menu">
             <h3>{{ data.nome_comune }}</h3>
+            <mat-list-item>
+                <img [src]="data.getFotoUrl()" [alt]="data.nome_comune" />
+            </mat-list-item>
             <p><strong>Codice museo:</strong> {{ data.cod_museo }}</p>
             <p><strong>Codice museo numero:</strong> {{ data.cod_museo_num }}</p>
             <p><strong>Epiteto:</strong> {{ data.epiteto }}</p>
@@ -18,12 +21,10 @@
         </div>
     </mat-list-item>
     <mat-list-item>
-        <img [src]="data.getFotoUrl()" [alt]="data.nome_comune" />
-    </mat-list-item>
-    <mat-list-item>
         <img [src]="data.getMapUrl()" [alt]="data.nome_comune" />
     </mat-list-item>
 </mat-drawer-container>
+
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Close</button>
-  </mat-dialog-actions>
+</mat-dialog-actions>
