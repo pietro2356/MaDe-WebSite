@@ -1,6 +1,6 @@
 <h1>{{ data.message }}</h1>
 
-<div *ngIf="data.type == 'famiglia'" [formGroup]="searchForm">
+<div *ngIf="data.type == 'famiglia'" [formGroup]="searchForm" id="famiglia">
         <div id="search-bar">
                 <form [formGroup]="searchForm">
                         <div fxLayoutAlign="center center">
@@ -11,7 +11,7 @@
         </div>
 </div>
 
-<div *ngIf="data.type == 'genere'" [formGroup]="searchForm">
+<div *ngIf="data.type == 'genere'" [formGroup]="searchForm" id="genere">
         <div id="search-bar">
                 <form [formGroup]="searchForm">
                         <div fxLayoutAlign="center center">
@@ -22,7 +22,7 @@
         </div>
 </div>
 
-<div *ngIf="data.type == 'altitudine'" [formGroup]="searchForm">
+<div *ngIf="data.type == 'altitudine'" [formGroup]="searchForm" id="altitudine">
         <div id="search-bar">
                 <form [formGroup]="searchForm">
                         <div fxLayoutAlign="center center">
