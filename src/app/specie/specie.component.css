@@ -18,6 +18,27 @@
     overflow-y: scroll;
 }
 
+.example-sidenav {
+    float: none;
+}
+
+.container_img{
+    height: auto;
+    width: auto;
+}
+
+.header{
+    background-color: #eeeeee11;
+    height: 50px;
+}
+
+.header__div__img{
+    float: right;
+    height: 50px;
+    margin-top: 1%;
+    margin-right: 1%;
+}
+
 @media (min-width: 320px) and (max-width: 767px){
    .images, .data{
        display: none;

@@ -8,6 +8,7 @@ import { FlexModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageCardComponent } from './image-card/image-card.component';
 import { DataCardComponent } from './data-card/data-card.component';
+import { CommonComponentModule } from '../common/common-component.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DataCardComponent } from './data-card/data-card.component';
     CommonModule,
     MaterialModule,
     FlexModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonComponentModule
   ],
   exports: [
     SpecieComponent
