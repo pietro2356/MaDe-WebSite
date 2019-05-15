@@ -3,7 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -52,6 +52,20 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  cercaImage() {
+    this.specieService.filtraSpecie();
+    this.router.navigateByUrl("/specie");
+  }
+
+  searchImage() {
+    this.dialog.open(DialogData, {
+      data: {
+        message: "Work in progress ...",
+        type: "cercaImage"
+      }
+    })
+  }
+
   cercaFamiglia() {
     this.dialog.open(DialogData, {
       data: {
@@ -79,18 +93,13 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  cercaSpecie(){
-    this.specieService.filtraSpecie();
-    this.router.navigateByUrl("/specie");
-  }
-
-  cercaImage() {
+  cercaButtonImage() {
     this.dialog.open(DialogData, {
       data: {
-        message: "Work in progress...",
-        type: "cercaImage"
+        message: "Ricerca tramite foto",
+        type: "carcaImage"
       }
-    });
+    })
   }
 }
 

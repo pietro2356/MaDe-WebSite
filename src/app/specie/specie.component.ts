@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Inject } from '@angular/core';
 import { Specie } from './model/specie.model';
 import { SpecieService } from './specie.service';
 import { Subscription } from 'rxjs';

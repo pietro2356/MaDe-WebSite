@@ -1,0 +1,14 @@
+mat-drawer-container {
+    overflow-y: scroll;
+    max-width: auto;
+    max-height: 800px;
+}
+
+mat-list-item img {
+    max-width: 280px;
+    max-height: auto;
+    margin: 0 auto;
+}
+h3{
+    text-align: center;
+}

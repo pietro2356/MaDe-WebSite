@@ -1,0 +1,30 @@
+<mat-drawer-container>
+    <mat-list-item>
+        <div id="menu">
+            <h3>{{ data.nome_comune }}</h3>
+            <mat-list-item>
+                <img [src]="data.getFotoUrl()" [alt]="data.nome_comune" />
+            </mat-list-item>
+            <p><strong>Codice museo:</strong> {{ data.cod_museo }}</p>
+            <p><strong>Codice museo numero:</strong> {{ data.cod_museo_num }}</p>
+            <p><strong>Epiteto:</strong> {{ data.epiteto }}</p>
+            <p><strong>Famiglia:</strong> {{ data.famiglia }}</p>
+            <p><strong>Genere:</strong> {{ data.genere }}</p>
+            <p><strong>Id:</strong> {{ data.id }}</p>
+            <p><strong>Nome latino:</strong> {{ data.nome_latino }}</p>
+            <p><strong>Quota max:</strong> {{ data.quota_max }}</p>
+            <p><strong>Quota min:</strong> {{ data.quota_min }}</p>
+            <p><strong>Riferimento:</strong> {{ data.riferimento }}</p>
+            <p><strong>Sinonimi:</strong> {{ data.sinonimi }}</p>
+            <p><strong>Subspecie:</strong> {{ data.subsp }}</p>
+            <p><strong>Descrizione:</strong> {{ data.descrizione }}</p>
+        </div>
+    </mat-list-item>
+    <mat-list-item>
+        <img [src]="data.getMapUrl()" [alt]="data.nome_comune" />
+    </mat-list-item>
+</mat-drawer-container>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
