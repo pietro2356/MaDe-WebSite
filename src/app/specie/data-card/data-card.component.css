@@ -1,4 +1,6 @@
-#menu h3 {
-    text-align: center;
+#menu{
     font-family: 'Brandon Text Regular';
+}
+h3{
+    text-align: center;
 }
