@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
   descrizione = "Sito realizzato per il progetto MaDe, collaborazione fra gli studenti dell'indirizzo informatico dell'istituto Marconi e gli alunni del liceo artistico Depero. Gestisce la navigazione nel database del Museo Civico di Rovereto, che comprende più di 2500 piante differenti distribuite sul territorio del Monte Baldo. I metodi di ricerca, richiesti dal Museo, permettono di selezionare le piante in base alla famiglia, al genere, alla quota minima e massima, ai nomi comuni o latini e dal contenuto della descrizione delle piante.";
   linkUtili = 'LINK UTILI';
   social = 'SOCIAL';
+  copy = '&copy;';
   constructor() { }
 
   ngOnInit() {
