@@ -12,6 +12,7 @@
         -o-background-size: cover; 
     background-size: cover;
     background-position: center; 
+    overflow-y: none;
 }
 
 #ricerca {
@@ -108,13 +109,18 @@ ul{
         overflow-x: none;
         position: fixed;
     }
+    .header__div__logo{
+        height: 30%;
+        width: 30%;
+    }
+    /*::ng-deep .mat-menu-panel {width: 100%!important; padding: 0 10px!important;} */
     #search-bar{
         top: 20% !important;
         width: 80% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
-        position: relative;
+        position: fixed;
     }
     #ricerca{
         left: 0 !important;
@@ -127,13 +133,36 @@ ul{
         float: right !important;
     }
     .container_filter{
-        position: absolute !important;
-        bottom: 30% !important;
+        position: fixed !important;
+        display: inline-block !important;
+        bottom: 25% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
     }
     .mat-drawer{
         width: 80% !important;
+    }
+    .example-container{
+        height: stretch;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        
+    }
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    
+    .clearfix {
+        display: inline-block;
     }
 }
