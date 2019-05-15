@@ -120,7 +120,8 @@ ul{
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
-        position: fixed;
+        height: auto;
+        width: auto;
     }
     #ricerca{
         left: 0 !important;
@@ -133,9 +134,9 @@ ul{
         float: right !important;
     }
     .container_filter{
-        position: fixed !important;
+        position: absolute;
         display: inline-block !important;
-        bottom: 25% !important;
+        bottom: 30% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
@@ -151,7 +152,6 @@ ul{
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        
     }
     .clearfix:after {
         visibility: hidden;
