@@ -22,7 +22,6 @@ export class Nomi{
   alberti = 'Alberti Davide';
   cerbaro = 'Cerbaro Jessica';
   baroni = 'Baroni Michelangelo';
-  battistoni = 'Battistoni Pietro';
   tomasini = 'Tomasini Valeria';
   folgarait = 'Folgarait Cecilia';
 }
