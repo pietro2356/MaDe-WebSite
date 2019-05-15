@@ -98,9 +98,15 @@ ul{
 
 @media (min-width: 320px) and (max-width: 481px) {
     .example-container{
-        background: url('../../assets/ico/provastrisce.jpg');
+        background: url('../../assets/ico/provastrisce.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
-        background-position: center; 
+        /*background-attachment: fixed;*/
+        background-attachment: initial;
+        overflow-x: none;
+        position: fixed;
     }
     #search-bar{
         top: 20% !important;
@@ -128,6 +134,6 @@ ul{
         margin: auto !important;
     }
     .mat-drawer{
-        width: 90% !important;
+        width: 80% !important;
     }
 }

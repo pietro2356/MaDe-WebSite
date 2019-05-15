@@ -83,6 +83,10 @@ export class SpecieService {
     }
   }
 
+  filtraSpecie() {
+    this.specieDaVisualizzare = this.specie;
+  }
+
   /*Filtri bottoni laterali*/
   filtraFamiglia(param: string) {
       let specieFiltrate = this.specie.filter(item => item.famiglia.toLowerCase().startsWith(param.toLowerCase()));
@@ -98,9 +102,5 @@ export class SpecieService {
     let specieFiltarateQMin = this.specie.filter(item => item.quota_min >= q_min)
     let specieFiltarate = specieFiltarateQMin.filter(item => item.quota_max <= q_max);
     this.specieDaVisualizzare = specieFiltarate;
-  }
-
-  filtraSpecie() {
-    this.specieDaVisualizzare = this.specie;
   }
 }
