@@ -116,6 +116,25 @@ export class DialogData {
 
   searchForm: FormGroup;
 
+  cod_museo: string;
+  cod_museo_num: string;
+  descrizione: string;
+  epiteto: string;
+  famiglia: string;
+  genere: string;
+  id: number;
+  image_dis: string;
+  image_foto: string;
+  image_map: string;
+  nome_comune: string;
+  nome_latino: string;
+  quota_max: number;
+  quota_min: number;
+  riferimento: string;
+  sinonimi: string;
+  subsp: string;
+  type: any;
+
   ngOnInit() {
     this.searchForm = new FormGroup(
       {
