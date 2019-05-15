@@ -1,16 +1,15 @@
 # Progetto MaDe
 Repository per il progetto MaDe
-Realizzazione di un sito web, per il riconoscimento della flora del monte Baldo
+Realizzazione di un sito web, per il riconoscimento della flora del monte Baldo.
 ***
 ## Creato con:
  * [Angular Material](https://material.angular.io/)
- * [HammerJS](https://hammerjs.github.io/)
- * [Popper](https://popper.js.org/)
 
 ## DATABASE:
- * [daas.marconirovereto](http://daas.marconirovereto.it:50055/)
- * [Link effettivo](http://madebaldo.marconirovereto.it/MaDeGruppo8/dist/made-website/)
-
+ * [Link al sito](http://madebaldo.marconirovereto.it/MaDeGruppo8/dist/made-website/)
+ * [Link alternativo](https://made-website.azurewebsites.net)
+ * [Database](http://daas.marconirovereto.it:50055/)
+ 
 ## Istruzioni per l'uso:
 *DOWNLOAD DEL REPOSITORY GIT:*
 ----------------------
@@ -35,7 +34,7 @@ ng build --prod=true
 ```
 ## Avvertenze!
 - Per consentire l'avvio dell'applicazione, Angular deve esere installato sulla macchina attuale.
-- ***Controllare il [CHANGELOG.md](CHANGELOG.md) per ulteriori informazioni.***
+- ***Visionare il [CHANGELOG](CHANGELOG.md) per ulteriori informazioni sulle versioni del sito.***
 
 # Team di sviluppo
 > - **Programmatori:**
@@ -55,11 +54,11 @@ ng build --prod=true
 > * **![Copertina](src/assets/ico/FloraMonteBaldoCopertina.JPG)**
 
 ## Copyright &copy;
-> * **MaDe**
-> * **Piazza Rosmini 16**
+> * **Progetto MaDe**
+> * **Museo civico di rovereto, Piazza Rosmini 16**
 > * **38068 Rovereto.**
 > * **museo@fondazionemcr.it**
-> * **tel. 0464 452800**
+> * **Tel. 0464 452800**
 
 ## License
 [MIT](LICENSE.md)

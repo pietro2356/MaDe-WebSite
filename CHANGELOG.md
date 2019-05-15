@@ -5,6 +5,16 @@ Il formato della data e: [ISO 8601](https://www.iso.org/iso-8601-date-and-time-f
 ## RELEASED ALPHA
 ---------------------
 
+## [0.1.1.0] (16-05-2019)
+### Deprecated;
+> **Rimozione del branch 23-riscritturacodice.**
+
+### Fixed:
+> * Fixata la visualizzaizone per il cellulare.
+> * Aggiunto il font predefinito sull'intero sito.
+> * 
+
+
 ## [0.1.0.0 Alpha] (2019-05-13) **ALPHA RELASE**
 ### Fixed
 > - **Implementata funzionalità dei bottoni FUNZIONANTI.**
