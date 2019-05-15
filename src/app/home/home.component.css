@@ -2,7 +2,9 @@
     height: auto;
     width: auto;
 }
-
+.mat-menu-item{
+    font-family: 'Brandon Text Regular';
+}
 .example-container{
     background: url('src/assets/ico/HOME_SFONDO.jpg');
     background-repeat: no-repeat;
@@ -12,6 +14,7 @@
         -o-background-size: cover; 
     background-size: cover;
     background-position: center; 
+    overflow-y: none;
 }
 
 #ricerca {
@@ -79,7 +82,6 @@
     margin-top: 1%;
     margin-right: 1%;
 }
-
 .example-sidenav {
     float: none;
 }
@@ -98,17 +100,29 @@ ul{
 
 @media (min-width: 320px) and (max-width: 481px) {
     .example-container{
-        background: url('../../assets/ico/provastrisce.jpg');
+        background: url('../../assets/ico/provastrisce.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
-        background-position: center; 
+        /*background-attachment: fixed;*/
+        background-attachment: initial;
+        overflow-x: none;
+        position: fixed;
     }
+    .header__div__logo{
+        height: 30%;
+        width: 30%;
+    }
+    /*::ng-deep .mat-menu-panel {width: 100%!important; padding: 0 10px!important;} */
     #search-bar{
         top: 20% !important;
         width: 80% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
-        position: relative;
+        height: auto;
+        width: auto;
     }
     #ricerca{
         left: 0 !important;
@@ -121,13 +135,35 @@ ul{
         float: right !important;
     }
     .container_filter{
-        position: absolute !important;
+        position: absolute;
+        display: inline-block !important;
         bottom: 30% !important;
         left: 0 !important;
         right: 0 !important;
         margin: auto !important;
     }
     .mat-drawer{
-        width: 90% !important;
+        width: 80% !important;
+    }
+    .example-container{
+        height: stretch;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    
+    .clearfix {
+        display: inline-block;
     }
 }

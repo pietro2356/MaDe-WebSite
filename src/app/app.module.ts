@@ -1,8 +1,6 @@
 import { NgModule, Component } from '@angular/core';
-import { CommonModule } from '../app/common/common.module';
 import { AppComponent } from './app.component';
 import { HomeComponent, DialogData } from './home/home.component';
-import { ProjectInfoComponent } from './common/project-info/project-info.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,16 +10,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SpecieModule } from './specie/specie.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DbService } from './common/db.service';
-import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.component'
+import { CommonComponentModule } from './common/common-component.module';
+import { DialogDataSpecie } from './specie/specie-list/specie-item/specie-item.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DialogData
+    DialogData,
+    DialogDataSpecie
   ],
   imports: [
-    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -29,11 +28,11 @@ import { LegendaErbeComponent } from './common/legenda-erbe/legenda-erbe.compone
     FlexLayoutModule,
     ReactiveFormsModule,
     SpecieModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonComponentModule
   ],
-  exports: [ProjectInfoComponent, LegendaErbeComponent],
   providers: [DbService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogData]
+  entryComponents: [DialogData, DialogDataSpecie]
 })
 export class AppModule { }

@@ -3,20 +3,16 @@
     background-color: #eee;
     padding: 2%;
     color: #333;
-    /*margin-top: 10px;*/
+	margin-bottom: 2%;
+	font-family: 'Brandon Text Regular';
 }
 .footer__p{
     padding-right: 1em;
     margin: 0px;
 }
-.footer__descrizione{ }
 .footer__contatti{
     font-weight: bold;
 }
-.footer__link_utili{ }
-.footer__social{ }
-
-
 .list-unstyled {
 	padding-left: 0;
 	list-style: none;
@@ -26,6 +22,11 @@
 	padding-right: 5px;
 	padding-left: 5px;
 	margin-bottom: 10px;
+}
+
+.link{
+	color: #08b;
+	text-decoration: underline;
 }
 
 /*CSS ICON*/
@@ -81,6 +82,7 @@
 }
  
 .social-icons .fa-adn{background-color:#504e54;} 
+.social-icons .fa-copyright{background-color: #FF0084;}
 .social-icons .fa-apple{background-color:#aeb5c5;} 
 .social-icons .fa-android{background-color:#A5C63B;}  
 .social-icons .fa-bitbucket,.social-icons .fa-bitbucket-square{background-color:#003366;} 
@@ -113,3 +115,9 @@
 .social-icons .fa-windows{background-color:#12B6F3;}
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;} 
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
+
+@media (min-width: 320px) and (max-width: 481px){
+	.footer{
+		margin-top: 700px;
+	}
+}

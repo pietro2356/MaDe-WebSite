@@ -1,16 +1,39 @@
-<div class="back_home">
-    <a href="javascript:void(0)" (click)="gotoPage()"><img src="ssets/ico/icona-home.png" alt="icona-home"></a>
-</div>
+<mat-drawer-container [hasBackdrop]="true" fullscreen>
+<mat-drawer #drawer_1 class="example-sidenav" mode="over">
+    <app-project-info></app-project-info>
+</mat-drawer>
+<mat-drawer #drawer_2 class="example-sidenav" mode="over">
+    <app-legenda-erbe></app-legenda-erbe>
+</mat-drawer>
 
-<div class="container">
-    <div class="ris" fxFlex="33.3%" fxFlex.xs="100%">
-        <app-specie-list class="specie1" *ngIf="specie" (onChangeSpecieIndex)="selezionaSpecie($event)" [specie]="specie" [corrente]="corrente"></app-specie-list>
-    </div>
-    <div class="images" fxFlex="33.3%">
-        <app-image-card [specie]="specie[corrente]" *ngIf="corrente >= 0"></app-image-card>
-    </div>
-    <div class="data" fxFlex="33.3%">
-        <app-data-card [specie]="specie[corrente]" *ngIf="corrente >= 0"></app-data-card>
-    </div>
-</div>
-<div id="message"></div>
+    <mat-drawer-content>
+        <div class="container_img">
+            <header class="header">
+                    <div class="back_home">
+                            <a href="javascript:void(0)" (click)="gotoPage()"><img src="assets/ico/icona-home.png" alt="icona-home"></a>
+                    </div>
+                <div class="header__div">
+                    <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="assets/ico/icona-montagne.png" alt="montagna"></button>
+                    <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="drawer_1.toggle();">Legenda</button>
+                    <button mat-menu-item (click)="drawer_2.toggle();">Sigle Erbe</button>
+                    </mat-menu>
+                <!--<a href="http://www.fondazionemcr.it/"><img class="header__div__logo" src="../../assets/ico/LOGOFondazioneMCR_200.png" alt="LOGOFondazioneMCR_200"></a>-->
+                </div>
+            </header>
+        </div>
+        <div class="container" style="margin-top: 5%;">
+                <div class="ris" fxFlex="33.3%" fxFlex.xs="100%">
+                    <app-specie-list class="specie1" *ngIf="specie" (onChangeSpecieIndex)="selezionaSpecie($event)" [specie]="specie" [corrente]="corrente"></app-specie-list>
+                </div>
+                <div class="images" fxFlex="33.3%">
+                    <app-image-card [specie]="specie[corrente]" *ngIf="corrente >= 0"></app-image-card>
+                </div>
+                <div class="data" fxFlex="33.3%">
+                    <app-data-card [specie]="specie[corrente]" *ngIf="corrente >= 0"></app-data-card>
+                </div>
+            </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+

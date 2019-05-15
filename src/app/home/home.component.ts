@@ -1,10 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
-import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
+import { Specie } from '../specie/model/specie.model';
 
 @Component({
   selector: 'app-home',
@@ -53,6 +53,20 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  cercaImage() {
+    this.specieService.filtraSpecie();
+    this.router.navigateByUrl("/specie");
+  }
+
+  searchImage() {
+    this.dialog.open(DialogData, {
+      data: {
+        message: "Work in progress ...",
+        type: "cercaImage"
+      }
+    })
+  }
+
   cercaFamiglia() {
     this.dialog.open(DialogData, {
       data: {
@@ -79,6 +93,15 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  cercaButtonImage() {
+    this.dialog.open(DialogData, {
+      data: {
+        message: "Ricerca tramite foto",
+        type: "carcaImage"
+      }
+    })
+  }
 }
 
 @Component({
@@ -94,9 +117,26 @@ export class DialogData {
 
   searchForm: FormGroup;
 
-  message: any;
+  cod_museo: string;
+  cod_museo_num: string;
+  descrizione: string;
+  epiteto: string;
+  famiglia: string;
+  genere: string;
+  id: number;
+  image_dis: string;
+  image_foto: string;
+  image_map: string;
+  nome_comune: string;
+  nome_latino: string;
+  quota_max: number;
+  quota_min: number;
+  riferimento: string;
+  sinonimi: string;
+  subsp: string;
   type: any;
-  
+  message: any;
+
   ngOnInit() {
     this.searchForm = new FormGroup(
       {
