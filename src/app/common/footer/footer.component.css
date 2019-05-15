@@ -10,14 +10,9 @@
     padding-right: 1em;
     margin: 0px;
 }
-.footer__descrizione{ }
 .footer__contatti{
     font-weight: bold;
 }
-.footer__link_utili{ }
-.footer__social{ }
-
-
 .list-unstyled {
 	padding-left: 0;
 	list-style: none;
@@ -27,6 +22,11 @@
 	padding-right: 5px;
 	padding-left: 5px;
 	margin-bottom: 10px;
+}
+
+.link{
+	color: #08b;
+	text-decoration: underline;
 }
 
 /*CSS ICON*/
@@ -82,6 +82,7 @@
 }
  
 .social-icons .fa-adn{background-color:#504e54;} 
+.social-icons .fa-copyright{background-color: #FF0084;}
 .social-icons .fa-apple{background-color:#aeb5c5;} 
 .social-icons .fa-android{background-color:#A5C63B;}  
 .social-icons .fa-bitbucket,.social-icons .fa-bitbucket-square{background-color:#003366;} 

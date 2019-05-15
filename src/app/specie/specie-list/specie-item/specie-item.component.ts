@@ -49,4 +49,11 @@ export class DialogDataSpecie {
   riferimento: string;
   sinonimi: string;
   subsp: string;
+
+  public getMapUrl(){
+
+  }
+  public getFotoUrl(){
+    
+  }
 }

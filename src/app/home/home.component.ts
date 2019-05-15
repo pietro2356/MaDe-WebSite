@@ -1,9 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DbService } from '../common/db.service';
 import { SpecieService } from '../specie/specie.service';
 import { Router } from '@angular/router';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
+import { Specie } from '../specie/model/specie.model';
 
 @Component({
   selector: 'app-home',
@@ -134,6 +135,7 @@ export class DialogData {
   sinonimi: string;
   subsp: string;
   type: any;
+  message: any;
 
   ngOnInit() {
     this.searchForm = new FormGroup(

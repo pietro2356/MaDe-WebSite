@@ -9,7 +9,7 @@
     <div class="container_img">
       <header class="header">
         <div class="header__div">
-            <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="ssets/ico/icona-montagne.png" alt="montagna"></button>
+            <button mat-button [matMenuTriggerFor]="menu"><img class="header__div__img" src="assets/ico/icona-montagne.png" alt="montagna"></button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item (click)="drawer_1.toggle();">Legenda</button>
               <button mat-menu-item (click)="drawer_2.toggle();">Sigle Erbe</button>
@@ -23,7 +23,7 @@
       <form [formGroup]="searchForm">
         <h1 id="ricerca">Flora del Monte Baldo</h1>
         <div fxLayoutAlign="center center">
-            <input type="image" src="assets/ico/icona foto.png" class="searchButtonImage" (click)="searchImage()">
+            <input type="image" src="assets/ico/icona-foto.png" class="searchButtonImage" (click)="searchImage()">
             <input type="text" class="searchTerm" placeholder="Search..." formControlName="ricerca">
           <input type="image" src="assets/ico/cerca.png" class="searchButton" (click)="cerca()">
         </div>
